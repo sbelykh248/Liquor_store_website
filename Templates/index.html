@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Store Inventory</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background: #f4f4f4; }
+        .card { background: white; padding: 15px; margin: 10px 0; border-radius: 8px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); }
+        h1 { color: #333; }
+        .price { font-weight: bold; color: green; }
+    </style>
+</head>
+<body>
+    <h1>Current Wine Inventory</h1>
+    <p>Verified Secure Connection (HTTPS Enabled)</p>
+
+    {% for wine in wines %}
+	<div class="card">
+    	<h3>{{ wine.brand }}</h3>
+    	<p>{{ wine.type }} - <span class="price">{{ wine.price }}</span></p>
+	</div>
+	{% endfor %}
+</body>
+</html>
