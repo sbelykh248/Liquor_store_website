@@ -189,40 +189,94 @@ body {
     text-transform: uppercase; font-size: 1.2rem;
 }
 
-/* --- COMPLETE MOBILE OVERHAUL --- */
+/* --- MOBILE UI LOCK-IN (2-COLUMN STANDARDIZED GRID) --- */
 @media (max-width: 768px) {
-    /* 1. Force a strict 2-column industrial grid */
+    /* 1. Black Sliding Category Menu */
+    nav {
+        background: #000 !important;
+        overflow-x: auto;
+        white-space: nowrap;
+        display: block !important;
+        padding: 12px 10px !important;
+        border-bottom: 2px solid #222;
+        /* Smooth scrolling for phone thumbs */
+        -webkit-overflow-scrolling: touch; 
+    }
+
+    nav a {
+        display: inline-block;
+        color: #fff !important;
+        margin-right: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        letter-spacing: 0.5px;
+    }
+
+    /* 2. Standardized 2-Column Grid */
     .bottle-grid { 
+        display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 0 !important;
+        gap: 0 !important; /* Industrial flush look */
         border-top: 1px solid #000;
     }
 
-    /* 2. Fix the height so bottles don't float or overlap */
+    /* 3. Force Cards to match exactly */
     .item-card { 
-        height: 450px !important;
-        border-bottom: 1px solid #000;
-        border-right: 1px solid #000;
+        height: 400px !important; 
+        padding: 15px 5px !important;
+        border-bottom: 1px solid #eee;
+        border-right: 1px solid #eee;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 20px 10px !important;
+        background: #fff;
     }
 
-    /* 3. Scale images correctly */
+    /* 4. Fix Image Sizing (No more giants) */
+    .visual {
+        height: 220px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+    }
+
     .visual img { 
-        max-height: 250px !important;
-        width: auto !important;
-        object-fit: contain;
+        max-height: 200px !important; 
+        max-width: 85% !important;
+        object-fit: contain !important; /* Ensures bottles don't stretch */
     }
 
-    /* 4. Fix typography and blackout UI spacing */
-    .brand-name { font-size: 0.8rem !important; }
-    
+    /* 5. Typography Adjustment */
+    .brand-name {
+        font-size: 0.7rem !important;
+        line-height: 1.2;
+        text-align: center;
+        margin-top: 10px;
+        height: 35px;
+        overflow: hidden;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    /* 6. Price/Selector UI Fix */
+    .blackout-ui {
+        padding: 8px !important;
+    }
+
+    .price-display {
+        font-size: 1.4rem !important;
+        text-align: center;
+    }
+
     .blackout-ui select {
         width: 100% !important;
-        font-size: 0.7rem !important;
-        padding: 10px !important;
+        padding: 8px !important;
+        font-size: 0.65rem !important;
+        margin-top: 5px;
     }
 }
+}
+
 
