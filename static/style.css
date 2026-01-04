@@ -189,36 +189,40 @@ body {
     text-transform: uppercase; font-size: 1.2rem;
 }
 
-/* Final Mobile Responsive Overhaul */
-@media (max-width: 600px) {
-    /* 1. Fix the Header scaling */
-    header h1 {
-        font-size: 10vw !important; /* Dynamically scales with phone width */
-        padding: 20px 0;
+/* --- COMPLETE MOBILE OVERHAUL --- */
+@media (max-width: 768px) {
+    /* 1. Force a strict 2-column industrial grid */
+    .bottle-grid { 
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0 !important;
+        border-top: 1px solid #000;
     }
 
-    /* 2. Fix the Card height and spacing */
-    .item-card {
-        height: auto !important; /* Allow card to grow with content */
-        min-height: 450px;
-        margin-bottom: 20px;
+    /* 2. Fix the height so bottles don't float or overlap */
+    .item-card { 
+        height: 450px !important;
+        border-bottom: 1px solid #000;
+        border-right: 1px solid #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px 10px !important;
     }
 
-    /* 3. Adjust the Grid to 2-columns for better visibility */
-    .bottle-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        padding: 10px;
+    /* 3. Scale images correctly */
+    .visual img { 
+        max-height: 250px !important;
+        width: auto !important;
+        object-fit: contain;
     }
 
-    /* 4. Ensure the placeholder image fits */
-    .visual img {
-        width: 80%;
-        height: auto;
-    }
-
-    /* 5. Scale down the Blackout UI text */
-    .price-display {
-        font-size: 1.8rem;
+    /* 4. Fix typography and blackout UI spacing */
+    .brand-name { font-size: 0.8rem !important; }
+    
+    .blackout-ui select {
+        width: 100% !important;
+        font-size: 0.7rem !important;
+        padding: 10px !important;
     }
 }
+
