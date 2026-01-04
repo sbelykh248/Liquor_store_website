@@ -54,7 +54,7 @@ def index():
         {"brand": "Stella Rosa Red", "cat": "wine", "image": "rstella.jpg", "prices": {"750ml": "13.99"}},
         {"brand": "Stella Rosa White", "cat": "wine", "image": "mstella.jpg", "prices": {"750ml": "13.99"}},
         {"brand": "Tisdales Cabernet Sauv", "cat": "wine", "image": "cstis.jpg", "prices": {"750ml": "6.99"}},
-        {"brand": "Tisdales Chardonnay", "cat": "wine", "image": "ctis.jpg", "prices": {"750ml": "6.99"}},
+        {"brand": "Tisdales Chardonnay", "cat": "wine", "image": "chtis.jpg", "prices": {"750ml": "6.99"}},
         {"brand": "Tisdales Merlot", "cat": "wine", "image": "mtis.jpg", "prices": {"750ml": "6.99"}},
         {"brand": "Tisdales Pinot Noir", "cat": "wine", "image": "pntis.jpg", "prices": {"750ml": "6.99"}},
         {"brand": "Woodbridge Cab Sauv", "cat": "wine", "image": "cswood.jpg", "prices": {"750ml": "8.99"}},
@@ -211,4 +211,5 @@ def index():
 if __name__ == '__main__':
 
     app.run(host='0.0.0.0', port=5000)
+
 
