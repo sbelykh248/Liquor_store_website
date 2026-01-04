@@ -189,94 +189,87 @@ body {
     text-transform: uppercase; font-size: 1.2rem;
 }
 
-/* --- MOBILE UI LOCK-IN (2-COLUMN STANDARDIZED GRID) --- */
+/* --- MOBILE UI LOCK-IN (2-COLUMN STANDARDIZED) --- */
 @media (max-width: 768px) {
-    /* 1. Black Sliding Category Menu */
-    nav {
-        background: #000 !important;
-        overflow-x: auto;
-        white-space: nowrap;
-        display: block !important;
-        padding: 12px 10px !important;
-        border-bottom: 2px solid #222;
-        /* Smooth scrolling for phone thumbs */
-        -webkit-overflow-scrolling: touch; 
+    /* 1. Static White Background & Global Text Fix */
+    body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
     }
+
+    /* 2. Top Navigation: Solid Black, Independent Horizontal Slide */
+    nav {
+        background: #000000 !important;
+        overflow-x: auto !important; /* Makes it independently slidable */
+        white-space: nowrap !important;
+        display: block !important;
+        padding: 15px 10px !important;
+        border-bottom: 1px solid #333;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        /* Hides scrollbar but keeps functionality */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    nav::-webkit-scrollbar { display: none; }
 
     nav a {
         display: inline-block;
-        color: #fff !important;
-        margin-right: 18px;
+        color: #ffffff !important; /* Pure white text on black background */
+        margin-right: 20px;
         font-weight: 700;
         text-transform: uppercase;
         font-size: 0.75rem;
-        letter-spacing: 0.5px;
+        text-decoration: none;
     }
 
-    /* 2. Standardized 2-Column Grid */
+    /* 3. Standardized 2-Column Grid (Like Website Counterpart) */
     .bottle-grid { 
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 0 !important; /* Industrial flush look */
-        border-top: 1px solid #000;
+        gap: 0 !important; /* Sharp industrial lines */
+        background-color: #000000; /* Create grid lines via background */
     }
 
-    /* 3. Force Cards to match exactly */
+    /* 4. Product Card Sizing & Independent Layout */
     .item-card { 
-        height: 400px !important; 
-        padding: 15px 5px !important;
-        border-bottom: 1px solid #eee;
-        border-right: 1px solid #eee;
+        height: 420px !important; 
+        padding: 20px 10px !important;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        background: #fff;
+        background: #ffffff !important; /* White background for cards */
+        border: 0.5px solid #000000; /* Sharp black borders */
     }
 
-    /* 4. Fix Image Sizing (No more giants) */
+    /* 5. Image Scaling (Standardize Small Size) */
     .visual {
-        height: 220px !important;
+        height: 240px !important;
         display: flex;
         align-items: center;
         justify-content: center;
-        background: #fff;
+        width: 100%;
     }
 
     .visual img { 
-        max-height: 200px !important; 
-        max-width: 85% !important;
-        object-fit: contain !important; /* Ensures bottles don't stretch */
+        max-height: 220px !important; 
+        max-width: 90% !important;
+        object-fit: contain !important; /* Standardize bottle sizing */
     }
 
-    /* 5. Typography Adjustment */
+    /* 6. Product Names (Bottom of Card) */
     .brand-name {
         font-size: 0.7rem !important;
-        line-height: 1.2;
-        text-align: center;
-        margin-top: 10px;
-        height: 35px;
-        overflow: hidden;
+        color: #000000 !important;
         text-transform: uppercase;
-        font-weight: bold;
-    }
-
-    /* 6. Price/Selector UI Fix */
-    .blackout-ui {
-        padding: 8px !important;
-    }
-
-    .price-display {
-        font-size: 1.4rem !important;
+        font-weight: 900;
         text-align: center;
+        line-height: 1.2;
+        margin: 10px 0;
     }
+}
+}
 
-    .blackout-ui select {
-        width: 100% !important;
-        padding: 8px !important;
-        font-size: 0.65rem !important;
-        margin-top: 5px;
-    }
-}
-}
 
 
