@@ -189,87 +189,85 @@ body {
     text-transform: uppercase; font-size: 1.2rem;
 }
 
-/* --- MOBILE UI LOCK-IN (2-COLUMN STANDARDIZED) --- */
+/* --- MOBILE UI OVERHAUL: BLACKOUT SLIDER & 2-COLUMN GRID --- */
 @media (max-width: 768px) {
-    /* 1. Static White Background & Global Text Fix */
-    body {
-        background-color: #ffffff !important;
-        color: #000000 !important;
-    }
+    /* 1. Global Reset: White Background, Black Text */
+    body { background-color: #ffffff !important; color: #000000 !important; }
 
-    /* 2. Top Navigation: Solid Black, Independent Horizontal Slide */
-    nav {
-        background: #000000 !important;
-        overflow-x: auto !important; /* Makes it independently slidable */
-        white-space: nowrap !important;
-        display: block !important;
+    /* 2. Top Nav: Solid Black, Independent Horizontal Slide */
+    /* Overriding your snippet's blue text with pure white/black */
+    .top-nav, nav {
+        background-color: #000000 !important;
+        display: flex !important;
+        flex-wrap: nowrap !important; /* Forces single line */
+        overflow-x: auto !important; /* Enables sliding */
         padding: 15px 10px !important;
-        border-bottom: 1px solid #333;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        /* Hides scrollbar but keeps functionality */
-        -ms-overflow-style: none;
-        scrollbar-width: none;
+        border-bottom: 2px solid #222;
+        -webkit-overflow-scrolling: touch; /* Smooth mobile scroll */
     }
-    nav::-webkit-scrollbar { display: none; }
 
-    nav a {
-        display: inline-block;
-        color: #ffffff !important; /* Pure white text on black background */
-        margin-right: 20px;
-        font-weight: 700;
-        text-transform: uppercase;
-        font-size: 0.75rem;
+    .top-nav a, nav a {
+        color: #ffffff !important; /* Removes the blue */
         text-decoration: none;
+        white-space: nowrap;
+        margin-right: 20px;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 0.75rem;
     }
 
-    /* 3. Standardized 2-Column Grid (Like Website Counterpart) */
-    .bottle-grid { 
+    /* 3. Standardized 2-Column Grid (Scrolling Down) */
+    .product-grid, .bottle-grid {
         display: grid !important;
         grid-template-columns: repeat(2, 1fr) !important;
-        gap: 0 !important; /* Sharp industrial lines */
-        background-color: #000000; /* Create grid lines via background */
+        gap: 0 !important; /* Industrial flush borders */
+        background-color: #000000; /* Creates black lines between white cards */
     }
 
-    /* 4. Product Card Sizing & Independent Layout */
-    .item-card { 
-        height: 420px !important; 
-        padding: 20px 10px !important;
+    /* 4. The Product Card: Name at Top AND Bottom */
+    .product, .item-card {
+        background-color: #ffffff !important;
+        height: 460px !important; /* Standardized height */
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        background: #ffffff !important; /* White background for cards */
-        border: 0.5px solid #000000; /* Sharp black borders */
+        padding: 15px 10px !important;
+        border: 0.5px solid #000000;
+        text-align: center;
     }
 
-    /* 5. Image Scaling (Standardize Small Size) */
-    .visual {
+    /* 5. Image Container: Fixes "Giant Bottle" Issue */
+    .visual, .product img {
         height: 240px !important;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 100%;
+        order: 2; /* Keeps image in the middle */
     }
 
-    .visual img { 
-        max-height: 220px !important; 
+    .visual img, .product img {
+        max-height: 220px !important;
         max-width: 90% !important;
-        object-fit: contain !important; /* Standardize bottle sizing */
+        object-fit: contain !important;
     }
 
-    /* 6. Product Names (Bottom of Card) */
-    .brand-name {
+    /* 6. Text Placement: Standardizing above and below */
+    .brand-name, .product p {
+        order: 1; /* Name at the Top */
         font-size: 0.7rem !important;
-        color: #000000 !important;
-        text-transform: uppercase;
         font-weight: 900;
-        text-align: center;
-        line-height: 1.2;
-        margin: 10px 0;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    .blackout-ui, .price-info {
+        order: 3; /* Price/Details at the Bottom */
+        font-size: 1.4rem !important;
+        font-weight: 900;
     }
 }
 }
+
 
 
 
