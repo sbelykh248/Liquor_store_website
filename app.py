@@ -66,7 +66,7 @@ def index():
         # 2. VODKA
         # ==========================================
         {"brand": "360 Chocolate Vodka", "cat": "vodka", "image": "360.jpg", "prices": {"750ml": "15.99"}},
-        {"brand": "Absolut Citron", "cat": "vodka", "image": "cabsolut.jpg", "prices": {"750ml": "30.00"}},
+        {"brand": "Absolut Citron", "cat": "vodka", "image": "cabsolute.jpg", "prices": {"750ml": "30.00"}},
         {"brand": "Absolut", "cat": "vodka", "image": "absolute.jpg", "prices": {"50ml": "2.25", "750ml": "27.00"}},
         {"brand": "Absolut Vanilla", "cat": "vodka", "image": "vabsolut.jpg", "prices": {"750ml": "30.00"}},
         {"brand": "Deep Eddy Ruby Red", "cat": "vodka", "image": "eddy.jpg", "prices": {"750ml": "19.99"}},
@@ -211,6 +211,7 @@ def index():
 if __name__ == '__main__':
 
     app.run(host='0.0.0.0', port=5000)
+
 
 
 
