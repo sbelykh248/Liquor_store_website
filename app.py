@@ -13,7 +13,7 @@ def index():
         # ==========================================
         {"brand": "19 Crimes Hard Chard", "cat": "wine", "image": "19.jpg", "prices": {"750ml": "13.99"}},
         {"brand": "Barefoot Moscato", "cat": "wine", "image": "bfoot.jpg", "prices": {"750ml": "7.99"}},
-        {"brand": "Barefoot Pink Moscato", "cat": "wine", "image": "pmfoot.jpg", "prices": {"750ml": "7.99"}},
+        {"brand": "Barefoot Pink Moscato", "cat": "wine", "image": "pmbfoot.jpg", "prices": {"750ml": "7.99"}},
         {"brand": "Barefoot Sauv Blanc", "cat": "wine", "image": "sbbfoot.jpg", "prices": {"750ml": "7.99"}},
         {"brand": "Bogle Petite Sirah", "cat": "wine", "image": "psbogle.jpg", "prices": {"750ml": "12.99"}},
         {"brand": "Bogle Sauv Blanc", "cat": "wine", "image": "sbbogle.jpg", "prices": {"750ml": "12.99"}},
@@ -165,9 +165,9 @@ def index():
         {"brand": "Di Amore Amaretto", "cat": "liqueur", "image": "diamore.jpg", "prices": {"750ml": "15.99"}},
         {"brand": "Du Bouchard Blue Curacao", "cat": "liqueur", "image": "dbbc.jpg", "prices": {"750ml": "11.99"}},
         {"brand": "Fabrizio Limoncello", "cat": "liqueur", "image": "lfabrizio.jpg", "prices": {"750ml": "18.99"}},
-        {"brand": "Fragolino", "cat": "liqueur", "image": "fragolino.jpg", "prices": {"750ml": "14.99"}},
+        {"brand": "Fragolino", "cat": "liqueur", "image": "frago.jpg", "prices": {"750ml": "14.99"}},
         {"brand": "Jagermeister", "cat": "liqueur", "image": "jager.jpg", "prices": {"750ml": "26.99"}},
-        {"brand": "Kahlua Dunkin", "cat": "liqueur", "image": "kahlua.jpg", "prices": {"750ml": "24.99"}},
+        {"brand": "Kahlua Dunkin", "cat": "liqueur", "image": "dunkin.jpg", "prices": {"750ml": "24.99"}},
         {"brand": "Llords Amaretto", "cat": "liqueur", "image": "allords.jpg", "prices": {"750ml": "12.99"}},
         {"brand": "Llords Creme de Cassis", "cat": "liqueur", "image": "cllords.jpg", "prices": {"750ml": "12.99"}},
         {"brand": "Llords Peppermint", "cat": "liqueur", "image": "pllords.jpg", "prices": {"750ml": "12.99"}},
@@ -191,7 +191,7 @@ def index():
         {"brand": "Cupcake Prosecco", "cat": "champagne", "image": "pcupcake.jpg", "prices": {"750ml": "13.99"}},
         {"brand": "La Marca Prosecco", "cat": "champagne", "image": "plamarca.jpg", "prices": {"750ml": "17.99"}},
         {"brand": "La Marca Rose", "cat": "champagne", "image": "prlamarca.jpg", "prices": {"750ml": "17.99"}},
-        {"brand": "Martini & Rossi Asti", "cat": "champagne", "image": "mandr.jpg", "prices": {"750ml": "15.99"}},
+        {"brand": "Martini & Rossi Asti", "cat": "champagne", "image": "martini.jpg", "prices": {"750ml": "15.99"}},
         {"brand": "Mionetto Prosecco", "cat": "champagne", "image": "pmoinetto.jpg", "prices": {"750ml": "16.99"}},
         {"brand": "Nando Fragolino", "cat": "champagne", "image": "nfrag.jpg", "prices": {"750ml": "12.99"}},
         {"brand": "Nano Mimosa", "cat": "champagne", "image": "mandre.jpg", "prices": {"750ml": "14.99"}},
@@ -199,17 +199,18 @@ def index():
         {"brand": "Santa Marina Prosecco", "cat": "champagne", "image": "pmarina.jpg", "prices": {"750ml": "12.99"}},
 
         # ==========================================
-        # 1. CANNED COCKTAILS (From your photos)
+        # 9. CANNED COCKTAILS (From your photos)
         # ==========================================
-        {"brand": "Buzzball Cocktails", "cat": "canned", "image": "buzz.jpg", "prices": {"Individual": "4.25", "Box": "16.00"}},
-        {"brand": "Gorae Soju", "cat": "canned", "image": "soju.jpg", "prices": {"Individual": "5.40", "Box": "32.50"}},
-        {"brand": "High Noon Sun Sips", "cat": "canned", "image": "highnoon.jpg", "prices": {"Individual": "3.50", "Box": "28.00"}},
-        {"brand": "Jack & Coke", "cat": "canned", "image": "cokejack.jpg", "prices": {"Individual": "3.50", "Box": "14.00"}},
+        {"brand": "Buzzball Cocktails", "cat": "mixed", "image": "buzz.jpg", "prices": {"Individual": "4.25", "Box": "16.00"}},
+        {"brand": "Gorae Soju", "cat": "mixed", "image": "soju.jpg", "prices": {"Individual": "5.40", "Box": "32.50"}},
+        {"brand": "High Noon Sun Sips", "cat": "mixed", "image": "highnoon.jpg", "prices": {"Individual": "3.50", "Box": "28.00"}},
+        {"brand": "Jack & Coke", "cat": "mixed", "image": "cokejack.jpg", "prices": {"Individual": "3.50", "Box": "14.00"}},
     ]
     return render_template('index.html', items=inventory)
 
 if __name__ == '__main__':
 
     app.run(host='0.0.0.0', port=5000)
+
 
 
