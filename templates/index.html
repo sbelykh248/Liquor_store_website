@@ -1,91 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junior's Wine & Liquor</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <style>
-        /* Force background white and remove black bottom space */
-        html, body {
-            background-color: #ffffff !important;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Remove black grid lines and borders */
-        .bottle-grid {
-            border: none !important;
-            background-color: #ffffff !important;
-            gap: 20px; /* Use gap for spacing instead of black lines */
-        }
-
-        .item-card {
-            border: none !important;
-            box-shadow: none !important;
-            background-color: #ffffff !important;
-        }
-
-        /* Clean up mobile view */
-        @media (max-width: 600px) {
-            .bottle-grid {
-                grid-template-columns: 1fr 1fr; /* 2 columns on mobile */
-            }
-            .item-card {
-                height: auto !important;
-                min-height: 450px;
-            }
-            header h1 {
-                font-size: 10vw !important;
-            }
-        }
-    </style>
 </head>
-
 <body>
     <div id="age-gate">
         <h1>21+</h1>
         <button onclick="document.getElementById('age-gate').style.display='none'">ENTER</button>
     </div>
 
+    <nav class="category-nav">
+        <button onclick="filterCat('all')" class="active">ALL</button>
+        <button onclick="filterCat('wine')">WINE</button>
+        <button onclick="filterCat('vodka')">VODKA</button>
+        <button onclick="filterCat('tequila')">TEQUILA</button>
+        <button onclick="filterCat('whiskey')">WHISKEY</button>
+        <button onclick="filterCat('rum')">RUM</button>
+        <button onclick="filterCat('mixed')">MIXED</button>
+    </nav>
+
     <div class="snap-container">
         <section class="section landing">
             <h1>JUNIOR'S</h1>
             <h2>WINE & LIQUOR</h2>
             <div class="info-block">
-                <p class="address">1654 BATH AVE</p>
-                <p class="hours">MON — SAT | 12PM — 8PM</p>
-                <p class="hours">SUN | 12PM — 6PM</p>
-                <p class="phone">EST. 1975 | (718) 331-6868</p>
+                <p>1654 BATH AVE, BROOKLYN | (718) 331-6868</p>
+                <p>MON-SAT: 1PM-8PM | SUN: 12PM-6PM</p>
             </div>
         </section>
 
         <section class="section">
-            <nav class="filter-nav">
-                <button onclick="filter('all')">ALL</button>
-                <button onclick="filter('wine')">WINE</button>
-                <button onclick="filter('mixed')">MIXED</button>
-                <button onclick="filter('champagne')">CHAMPAGNE</button> 
-                <button onclick="filter('vodka')">VODKA</button>
-                <button onclick="filter('gin')">GIN</button> 
-                <button onclick="filter('tequila')">TEQUILA</button>
-                <button onclick="filter('whiskey')">WHISKEY</button>
-                <button onclick="filter('liqueur')">LIQUEURS</button>
-            </nav>
-
-            <div class="bottle-grid">
+            <div class="bottle-grid" id="main-grid">
                 {% for item in items %}
-                <div class="item-card {{ item.cat }}">
+                <div class="item-card {{ item.cat }}" onclick='openDetail({{ item | tojson }})'>
                     <div class="visual">
-                        <img src="{{ url_for('static', filename='images/' + item.image) }}" onerror="this.src='https://placehold.co/200x400?text=Bottle'">
+                        <img src="{{ url_for('static', filename='images/' + item.images.values()|list|first) }}">
                         <h3>{{ item.brand }}</h3>
                     </div>
                     <div class="blackout-ui">
-                        <p class="hover-brand">{{ item.brand }}</p>
-                        <select onchange="this.nextElementSibling.innerText = '$ ' + this.value">
-                            {% for size, price in item.prices.items() %}
-                            <option value="{{ price }}">{{ size }}</option>
-                            {% endfor %}
-                        </select>
                         <h2 class="price-display">$ {{ item.prices.values()|list|first }}</h2>
+                        <p style="font-weight:900; margin-top:10px;">QUICK VIEW</p>
                     </div>
                 </div>
                 {% endfor %}
@@ -93,11 +48,83 @@
         </section>
     </div>
 
+    <div id="detail-overlay" class="overlay">
+        <div class="overlay-content">
+            <button class="close-btn" onclick="closeDetail()">✕ CLOSE</button>
+            <div class="overlay-layout">
+                <div class="overlay-image">
+                    <img id="modal-img" src="">
+                </div>
+                <div class="overlay-info">
+                    <h1 id="modal-title"></h1>
+                    <p id="modal-desc"></p>
+                    
+                    <div class="selector-container">
+                        <label id="selector-label">SELECT OPTION</label>
+                        <select id="modal-select" onchange="updateModal()"></select>
+                    </div>
+
+                    <div class="price-box" id="modal-price"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
-        function filter(cat) {
-            document.querySelectorAll('.item-card').forEach(card => {
-                card.style.display = (cat === 'all' || card.classList.contains(cat)) ? 'flex' : 'none';
+        let currentItemData = {}; 
+
+        function filterCat(cat) {
+            document.querySelectorAll('.category-nav button').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+            document.querySelectorAll('.item-card').forEach(i => {
+                i.style.display = (cat === 'all' || i.classList.contains(cat)) ? 'flex' : 'none';
             });
+        }
+
+        function openDetail(item) {
+            currentItemData = item;
+            document.getElementById('modal-title').innerText = item.brand;
+            
+            // Set label based on whether it's BuzzBallz (Flavors) or standard sizes
+            document.getElementById('selector-label').innerText = item.is_flavor_based ? "SELECT FLAVOR" : "SELECT SIZE";
+
+            const select = document.getElementById('modal-select');
+            select.innerHTML = "";
+            
+            // Populate select with sorted keys from Python backend
+            Object.entries(item.prices).forEach(([key, price]) => {
+                let opt = document.createElement('option');
+                opt.value = price;
+                opt.text = key;
+                opt.setAttribute('data-key', key);
+                select.appendChild(opt);
+            });
+
+            updateModal();
+            document.getElementById('detail-overlay').style.display = 'flex';
+        }
+
+        function updateModal() {
+            const select = document.getElementById('modal-select');
+            const key = select.options[select.selectedIndex].getAttribute('data-key');
+            
+            // Update Price
+            document.getElementById('modal-price').innerText = "$" + select.value;
+
+            // Update Image (handles flavor or size specific images)
+            const imgSrc = currentItemData.images[key] || Object.values(currentItemData.images)[0];
+            document.getElementById('modal-img').src = "/static/images/" + imgSrc;
+
+            // Update Description (specifically for flavor-based items like BuzzBallz)
+            if (currentItemData.descriptions && currentItemData.descriptions[key]) {
+                document.getElementById('modal-desc').innerText = currentItemData.descriptions[key];
+            } else {
+                document.getElementById('modal-desc').innerText = currentItemData.description || "A premium selection at Junior's.";
+            }
+        }
+
+        function closeDetail() {
+            document.getElementById('detail-overlay').style.display = 'none';
         }
     </script>
 </body>
