@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ item.brand }} - Junior's</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="product-detail-container">
+        <a href="/" class="junior-back-btn">← BACK TO SHOP</a>
+        
+        <div class="product-detail-layout">
+            <div class="product-image-section">
+                <img id="main-product-img" src="{{ url_for('static', filename='images/' + item.images.values()|list|first) }}">
+            </div>
+
+            <div class="product-info-section">
+                <p class="category-label">{{ item.cat }}</p>
+                <h1 class="product-title">{{ item.brand }}</h1>
+                
+                <p class="product-description">{{ item.description }}</p>
+
+                <div class="selector-container">
+                    <label>SELECT SIZE</label>
+                    <select id="size-selector" onchange="updatePrice(this)">
+                        {% for size, price in item.prices.items() %}
+                        <option value="{{ size }}" data-price="{{ price }}">{{ size }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="price-box" id="dynamic-price">
+                    ${{ item.prices.values()|list|first }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updatePrice(selectElement) {
+            const selectedOption = selectElement.options[selectElement.selectedIndex];
+            const price = selectedOption.getAttribute('data-price');
+            document.getElementById('dynamic-price').innerText = '$' + price;
+        }
+    </script>
+</body>
+</html>
