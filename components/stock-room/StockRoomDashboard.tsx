@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Search, X, RotateCcw, ChevronRight, LogOut, RefreshCw, SlidersHorizontal } from "lucide-react";
+import { Search, X, RotateCcw, ChevronRight, RefreshCw, SlidersHorizontal } from "lucide-react";
 import { useInventory } from "@/lib/inventory/provider";
 import { matchesQuery, isFullySoldOut, heroImage } from "@/lib/product-helpers";
 import { formatPrice, cn } from "@/lib/utils";
@@ -12,7 +12,7 @@ import type { Product } from "@/lib/types";
 type Filter = "all" | "inStock" | "soldOut";
 
 export default function StockRoomDashboard() {
-  const { products, manager, signOut, toggleProductSoldOut, refresh, isFirebaseConfigured } = useInventory();
+  const { products, toggleProductSoldOut, isFirebaseConfigured } = useInventory();
   const [query, setQuery] = useState("");
   const [filter, setFilter] = useState<Filter>("all");
   const [busyId, setBusyId] = useState<string | null>(null);
@@ -36,35 +36,9 @@ export default function StockRoomDashboard() {
   }
 
   return (
-    <div className="mx-auto max-w-4xl px-4 pb-16 sm:px-6">
-      <div className="flex items-center justify-between py-5">
-        <div>
-          <p className="eyebrow text-[9px] text-brass">
-            {isFirebaseConfigured ? "Connected to Firebase" : "Local demo mode"}
-          </p>
-          <h1 className="mt-1 font-serif text-2xl font-bold text-cream sm:text-3xl">Stock Room</h1>
-          {manager.email && <p className="mt-0.5 text-[12px] text-cream-faint">{manager.email}</p>}
-        </div>
-        <div className="flex items-center gap-2">
-          <button
-            onClick={refresh}
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-hairline text-cream-muted transition-colors hover:border-brass/50 hover:text-cream"
-            aria-label="Sync"
-          >
-            <RefreshCw size={14} />
-          </button>
-          <button
-            onClick={signOut}
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-hairline text-cream-muted transition-colors hover:border-claret/60 hover:text-claret"
-            aria-label="Sign out"
-          >
-            <LogOut size={14} />
-          </button>
-        </div>
-      </div>
-
+    <div className="flex flex-col gap-5">
       {!isFirebaseConfigured && (
-        <div className="mb-5 flex items-start gap-2.5 rounded-xl border border-brass/35 bg-brass/10 px-3.5 py-3">
+        <div className="flex items-start gap-2.5 rounded-xl border border-brass/35 bg-brass/10 px-3.5 py-3">
           <SlidersHorizontal size={14} className="mt-0.5 shrink-0 text-brass" strokeWidth={2.25} />
           <p className="text-[12px] leading-relaxed text-cream-muted">
             Changes here save to this browser only. Add your <code className="text-brass">NEXT_PUBLIC_FIREBASE_*</code>{" "}
@@ -73,7 +47,7 @@ export default function StockRoomDashboard() {
         </div>
       )}
 
-      <div className="sticky top-[57px] z-10 -mx-4 border-y border-hairline/50 bg-ink/95 px-4 py-3.5 backdrop-blur-md sm:top-[65px] sm:mx-0 sm:rounded-2xl sm:border sm:px-4">
+      <div className="rounded-2xl border border-hairline/60 bg-surface/40 p-3.5">
         <div className="flex items-center gap-2.5 rounded-chip border border-hairline bg-surface px-3.5 py-3 focus-within:border-brass/70">
           <Search size={14} className="shrink-0 text-brass" />
           <input
@@ -109,7 +83,7 @@ export default function StockRoomDashboard() {
         </div>
       </div>
 
-      <div className="mt-4 flex flex-col gap-2.5">
+      <div className="flex flex-col gap-2.5">
         {results.length === 0 ? (
           <p className="py-14 text-center text-[13px] text-cream-muted">No bottles match that.</p>
         ) : (

@@ -16,7 +16,7 @@ import BottleCard from "@/components/BottleCard";
 import TopShelfCard from "@/components/TopShelfCard";
 import CategoryRail from "@/components/CategoryRail";
 import SortMenu from "@/components/SortMenu";
-import StoreQuotes from "@/components/StoreQuotes";
+import StoreQuote from "@/components/StoreQuotes";
 
 export default function ShopClient() {
   const { products } = useInventory();
@@ -65,7 +65,10 @@ export default function ShopClient() {
       </section>
 
       <div className="mt-10 sm:mt-12">
-        <StoreQuotes />
+        <StoreQuote
+          line="Don't let a moments pleasure lead to a lifetime of misery"
+          attribution="Junior"
+        />
       </div>
 
       {/* Top shelf marquee */}
