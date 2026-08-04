@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-serif: var(--font-display);
+
+  /* Deep cellar espresso surfaces, warm brass accents, cream editorial type —
+     ported 1:1 from the iOS app's `Utilities/Theme.swift` design tokens. */
+  --color-ink: #0e0d0c;
+  --color-surface: #191715;
+  --color-surface-raised: #23201d;
+  --color-hairline: #3f3932;
+
+  --color-brass: #c8a24a;
+  --color-brass-soft: #967937;
+  --color-claret: #6f1d28;
+
+  --color-cream: #f2ede4;
+  --color-cream-muted: rgb(242 237 228 / 58%);
+  --color-cream-faint: rgb(242 237 228 / 32%);
+
+  --radius-card: 18px;
+  --radius-chip: 22px;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-cream);
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--color-brass);
+  color: var(--color-ink);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-ink);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-hairline);
+  border-radius: 999px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.eyebrow {
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.brass-hairline {
+  border: 0.75px solid var(--color-hairline);
+}
+
+.cellar-bg {
+  position: relative;
+  background-color: var(--color-ink);
+}
+
+.cellar-bg::before,
+.cellar-bg::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cellar-bg::before {
+  background: radial-gradient(
+    circle at 50% -5%,
+    rgb(200 162 74 / 16%),
+    transparent 55%
+  );
+}
+
+.cellar-bg::after {
+  background: radial-gradient(
+    circle at 105% 72%,
+    rgb(111 29 40 / 14%),
+    transparent 50%
+  );
+}
