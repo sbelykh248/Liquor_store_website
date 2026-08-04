@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Clock, MapPin, Phone, Navigation } from "lucide-react";
+import StoreQuote from "@/components/StoreQuotes";
 
 export const metadata: Metadata = {
   title: "Visit",
@@ -82,7 +83,11 @@ export default function VisitPage() {
         </div>
       </div>
 
-      <div className="mt-10 flex flex-col items-center gap-2 text-center">
+      <div className="mt-12">
+        <StoreQuote line="Family-owned since day one" attribution="Junior's Wine & Liquor" />
+      </div>
+
+      <div className="mt-8 flex flex-col items-center gap-2 text-center">
         <span className="h-px w-10 bg-brass/40" />
         <p className="eyebrow text-[9px] text-cream-faint">
           Must be 21+ to purchase &middot; Please drink responsibly

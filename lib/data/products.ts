@@ -14,7 +14,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 13.99,
-        image: "/images/bottles/19.jpg",
+        image: "/images/bottles/19.webp",
         note: null,
       },
     ],
@@ -29,7 +29,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 7.99,
-        image: "/images/bottles/bfoot.jpg",
+        image: "/images/bottles/bfoot.webp",
         note: null,
       },
     ],
@@ -44,7 +44,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 7.99,
-        image: "/images/bottles/pmbfoot.jpg",
+        image: "/images/bottles/pmbfoot.webp",
         note: null,
       },
     ],
@@ -59,7 +59,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 7.99,
-        image: "/images/bottles/sbbfoot.jpg",
+        image: "/images/bottles/sbbfoot.webp",
         note: null,
       },
     ],
@@ -74,7 +74,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 12.99,
-        image: "/images/bottles/psbogle.jpg",
+        image: "/images/bottles/psbogle.webp",
         note: null,
       },
     ],
@@ -89,7 +89,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 12.99,
-        image: "/images/bottles/sbbogle.jpg",
+        image: "/images/bottles/sbbogle.webp",
         note: null,
       },
     ],
@@ -104,7 +104,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 12.99,
-        image: "/images/bottles/cape.jpg",
+        image: "/images/bottles/cape.webp",
         note: null,
       },
     ],
@@ -119,7 +119,7 @@ export const products: Product[] = [
       {
         label: "4L",
         price: 21.99,
-        image: "/images/bottles/cr.jpg",
+        image: "/images/bottles/cr.webp",
         note: null,
       },
     ],
@@ -134,7 +134,7 @@ export const products: Product[] = [
       {
         label: "3L",
         price: 16.99,
-        image: "/images/bottles/ccr.jpg",
+        image: "/images/bottles/ccr.webp",
         note: null,
       },
     ],
@@ -149,13 +149,13 @@ export const products: Product[] = [
       {
         label: "3L",
         price: 16.99,
-        image: "/images/bottles/pcr.jpg",
+        image: "/images/bottles/pcr.webp",
         note: null,
       },
       {
         label: "4L",
         price: 21.99,
-        image: "/images/bottles/pcr.jpg",
+        image: "/images/bottles/pcr.webp",
         note: null,
       },
     ],
@@ -170,7 +170,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 9.99,
-        image: "/images/bottles/cavit.jpg",
+        image: "/images/bottles/cavit.webp",
         note: null,
       },
     ],
@@ -185,7 +185,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 11.99,
-        image: "/images/bottles/rcupcake.jpg",
+        image: "/images/bottles/rcupcake.webp",
         note: null,
       },
     ],
@@ -200,7 +200,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 11.99,
-        image: "/images/bottles/sbcupcake.jpg",
+        image: "/images/bottles/sbcupcake.webp",
         note: null,
       },
     ],
@@ -215,7 +215,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 45.0,
-        image: "/images/bottles/deagle.jpg",
+        image: "/images/bottles/deagle.webp",
         note: null,
       },
     ],
@@ -230,7 +230,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 13.99,
-        image: "/images/bottles/fferoes.jpg",
+        image: "/images/bottles/fferoes.webp",
         note: null,
       },
     ],
@@ -245,7 +245,7 @@ export const products: Product[] = [
       {
         label: "5L",
         price: 24.99,
-        image: "/images/bottles/cfranzia.jpg",
+        image: "/images/bottles/cfranzia.webp",
         note: null,
       },
     ],
@@ -260,7 +260,7 @@ export const products: Product[] = [
       {
         label: "5L",
         price: 24.99,
-        image: "/images/bottles/mfranzia.jpg",
+        image: "/images/bottles/mfranzia.webp",
         note: null,
       },
     ],
@@ -275,13 +275,13 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 6.99,
-        image: "/images/bottles/frontera.jpg",
+        image: "/images/bottles/frontera.webp",
         note: null,
       },
       {
         label: "1.5L",
         price: 11.99,
-        image: "/images/bottles/frontera.jpg",
+        image: "/images/bottles/frontera.webp",
         note: null,
       },
     ],
@@ -296,7 +296,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 18.99,
-        image: "/images/bottles/iter.jpg",
+        image: "/images/bottles/iter.webp",
         note: null,
       },
     ],
@@ -311,7 +311,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 14.99,
-        image: "/images/bottles/csjosh.jpg",
+        image: "/images/bottles/csjosh.webp",
         note: null,
       },
     ],
@@ -326,7 +326,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 16.99,
-        image: "/images/bottles/hjosh.jpg",
+        image: "/images/bottles/hjosh.webp",
         note: null,
       },
     ],
@@ -341,7 +341,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 13.99,
-        image: "/images/bottles/pnjosh.jpg",
+        image: "/images/bottles/pnjosh.webp",
         note: null,
       },
     ],
@@ -356,7 +356,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 13.99,
-        image: "/images/bottles/sbjosh.png",
+        image: "/images/bottles/sbjosh.webp",
         note: null,
       },
     ],
@@ -371,7 +371,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 14.99,
-        image: "/images/bottles/sbkendall.jpg",
+        image: "/images/bottles/sbkendall.webp",
         note: null,
       },
     ],
@@ -386,7 +386,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 12.99,
-        image: "/images/bottles/dmenage.jpg",
+        image: "/images/bottles/dmenage.webp",
         note: null,
       },
     ],
@@ -401,7 +401,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 12.99,
-        image: "/images/bottles/rbmenage.jpg",
+        image: "/images/bottles/rbmenage.webp",
         note: null,
       },
     ],
@@ -416,7 +416,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 12.99,
-        image: "/images/bottles/smenage.jpg",
+        image: "/images/bottles/smenage.webp",
         note: null,
       },
     ],
@@ -431,7 +431,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 14.99,
-        image: "/images/bottles/csrmondavi.jpg",
+        image: "/images/bottles/csrmondavi.webp",
         note: null,
       },
     ],
@@ -446,7 +446,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 14.99,
-        image: "/images/bottles/mrmondavi.jpg",
+        image: "/images/bottles/mrmondavi.webp",
         note: null,
       },
     ],
@@ -461,13 +461,13 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 8.99,
-        image: "/images/bottles/sangria.jpg",
+        image: "/images/bottles/sangria.webp",
         note: null,
       },
       {
         label: "1.5L",
         price: 13.99,
-        image: "/images/bottles/sangria.jpg",
+        image: "/images/bottles/sangria.webp",
         note: null,
       },
     ],
@@ -482,13 +482,13 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 8.99,
-        image: "/images/bottles/lambrusco.jpg",
+        image: "/images/bottles/lambrusco.webp",
         note: null,
       },
       {
         label: "1.5L",
         price: 13.99,
-        image: "/images/bottles/lambrusco.jpg",
+        image: "/images/bottles/lambrusco.webp",
         note: null,
       },
     ],
@@ -503,7 +503,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 13.99,
-        image: "/images/bottles/cruffino.jpg",
+        image: "/images/bottles/cruffino.webp",
         note: null,
       },
     ],
@@ -518,7 +518,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 14.99,
-        image: "/images/bottles/truffino.jpg",
+        image: "/images/bottles/truffino.webp",
         note: null,
       },
     ],
@@ -533,7 +533,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 24.99,
-        image: "/images/bottles/margherita.jpg",
+        image: "/images/bottles/margherita.webp",
         note: null,
       },
     ],
@@ -548,7 +548,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 7.99,
-        image: "/images/bottles/cabmarina.jpg",
+        image: "/images/bottles/cabmarina.webp",
         note: null,
       },
     ],
@@ -563,13 +563,13 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 7.99,
-        image: "/images/bottles/csmarina.jpg",
+        image: "/images/bottles/csmarina.webp",
         note: null,
       },
       {
         label: "1.5L",
         price: 12.99,
-        image: "/images/bottles/csmarina.jpg",
+        image: "/images/bottles/csmarina.webp",
         note: null,
       },
     ],
@@ -584,13 +584,13 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 7.99,
-        image: "/images/bottles/msmarina.png",
+        image: "/images/bottles/msmarina.webp",
         note: null,
       },
       {
         label: "1.5L",
         price: 12.99,
-        image: "/images/bottles/msmarina.png",
+        image: "/images/bottles/msmarina.webp",
         note: null,
       },
     ],
@@ -605,13 +605,13 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 7.99,
-        image: "/images/bottles/pgsmarina.jpg",
+        image: "/images/bottles/pgsmarina.webp",
         note: null,
       },
       {
         label: "1.5L",
         price: 12.99,
-        image: "/images/bottles/pgsmarina.jpg",
+        image: "/images/bottles/pgsmarina.webp",
         note: null,
       },
     ],
@@ -626,13 +626,13 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 7.99,
-        image: "/images/bottles/pnsmarina.jpg",
+        image: "/images/bottles/pnsmarina.webp",
         note: null,
       },
       {
         label: "1.5L",
         price: 12.99,
-        image: "/images/bottles/pnsmarina.jpg",
+        image: "/images/bottles/pnsmarina.webp",
         note: null,
       },
     ],
@@ -647,7 +647,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 7.99,
-        image: "/images/bottles/tsmarina.jpg",
+        image: "/images/bottles/tsmarina.webp",
         note: null,
       },
     ],
@@ -662,7 +662,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 13.99,
-        image: "/images/bottles/rstella.jpg",
+        image: "/images/bottles/rstella.webp",
         note: null,
       },
     ],
@@ -677,7 +677,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 13.99,
-        image: "/images/bottles/mstella.jpg",
+        image: "/images/bottles/mstella.webp",
         note: null,
       },
     ],
@@ -692,7 +692,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 6.99,
-        image: "/images/bottles/cstis.jpg",
+        image: "/images/bottles/cstis.webp",
         note: null,
       },
     ],
@@ -707,7 +707,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 6.99,
-        image: "/images/bottles/chtis.jpg",
+        image: "/images/bottles/chtis.webp",
         note: null,
       },
     ],
@@ -722,7 +722,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 6.99,
-        image: "/images/bottles/mtis.jpg",
+        image: "/images/bottles/mtis.webp",
         note: null,
       },
     ],
@@ -737,7 +737,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 6.99,
-        image: "/images/bottles/pntis.jpg",
+        image: "/images/bottles/pntis.webp",
         note: null,
       },
     ],
@@ -752,7 +752,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 8.99,
-        image: "/images/bottles/cswood.jpg",
+        image: "/images/bottles/cswood.webp",
         note: null,
       },
     ],
@@ -767,13 +767,13 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 8.99,
-        image: "/images/bottles/cwood.jpg",
+        image: "/images/bottles/cwood.webp",
         note: null,
       },
       {
         label: "1.5L",
         price: 14.99,
-        image: "/images/bottles/cwood.jpg",
+        image: "/images/bottles/cwood.webp",
         note: null,
       },
     ],
@@ -788,7 +788,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 8.99,
-        image: "/images/bottles/mwood.jpg",
+        image: "/images/bottles/mwood.webp",
         note: null,
       },
     ],
@@ -803,7 +803,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 8.99,
-        image: "/images/bottles/pnwood.jpg",
+        image: "/images/bottles/pnwood.webp",
         note: null,
       },
     ],
@@ -818,25 +818,25 @@ export const products: Product[] = [
       {
         label: "50ml",
         price: 2.25,
-        image: "/images/bottles/absolut50.jpg",
+        image: "/images/bottles/absolut50.webp",
         note: null,
       },
       {
         label: "200ml",
         price: 7.99,
-        image: "/images/bottles/absolut200.jpg",
+        image: "/images/bottles/absolut200.webp",
         note: null,
       },
       {
         label: "375ml",
         price: 14.99,
-        image: "/images/bottles/absolut375.jpg",
+        image: "/images/bottles/absolut375.webp",
         note: null,
       },
       {
         label: "750ml",
         price: 27.0,
-        image: "/images/bottles/absolut750.jpg",
+        image: "/images/bottles/absolut750.webp",
         note: null,
       },
     ],
@@ -851,37 +851,37 @@ export const products: Product[] = [
       {
         label: "50ml",
         price: 2.0,
-        image: "/images/bottles/titos50.png",
+        image: "/images/bottles/titos50.webp",
         note: null,
       },
       {
         label: "200ml",
         price: 8.5,
-        image: "/images/bottles/titos200.png",
+        image: "/images/bottles/titos200.webp",
         note: null,
       },
       {
         label: "375ml",
         price: 12.5,
-        image: "/images/bottles/titos375.png",
+        image: "/images/bottles/titos375.webp",
         note: null,
       },
       {
         label: "750ml",
         price: 23.0,
-        image: "/images/bottles/titos750.png",
+        image: "/images/bottles/titos750.webp",
         note: null,
       },
       {
         label: "1L",
         price: 30.0,
-        image: "/images/bottles/titos1.png",
+        image: "/images/bottles/titos1.webp",
         note: null,
       },
       {
         label: "1.75L",
         price: 43.0,
-        image: "/images/bottles/titos175.png",
+        image: "/images/bottles/titos175.webp",
         note: null,
       },
     ],
@@ -896,7 +896,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 15.99,
-        image: "/images/bottles/360.jpg",
+        image: "/images/bottles/360.webp",
         note: null,
       },
     ],
@@ -911,7 +911,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 30.0,
-        image: "/images/bottles/absolutc.jpg",
+        image: "/images/bottles/absolutc.webp",
         note: null,
       },
     ],
@@ -926,7 +926,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 30.0,
-        image: "/images/bottles/vabsolut.jpg",
+        image: "/images/bottles/vabsolut.webp",
         note: null,
       },
     ],
@@ -941,7 +941,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 19.99,
-        image: "/images/bottles/eddy.jpg",
+        image: "/images/bottles/eddy.webp",
         note: null,
       },
     ],
@@ -956,7 +956,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 24.99,
-        image: "/images/bottles/effen.jpg",
+        image: "/images/bottles/effen.webp",
         note: null,
       },
     ],
@@ -971,13 +971,13 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 9.99,
-        image: "/images/bottles/georgie.jpg",
+        image: "/images/bottles/georgie.webp",
         note: null,
       },
       {
         label: "1.75L",
         price: 16.99,
-        image: "/images/bottles/georgie.jpg",
+        image: "/images/bottles/georgie.webp",
         note: null,
       },
     ],
@@ -992,7 +992,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 32.99,
-        image: "/images/bottles/ggoose.jpg",
+        image: "/images/bottles/ggoose.webp",
         note: null,
       },
     ],
@@ -1007,7 +1007,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 34.99,
-        image: "/images/bottles/russia.jpg",
+        image: "/images/bottles/russia.webp",
         note: null,
       },
     ],
@@ -1022,7 +1022,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 29.99,
-        image: "/images/bottles/ketel.jpg",
+        image: "/images/bottles/ketel.webp",
         note: null,
       },
     ],
@@ -1037,25 +1037,25 @@ export const products: Product[] = [
       {
         label: "50ml",
         price: 1.5,
-        image: "/images/bottles/ramsterdam.jpg",
+        image: "/images/bottles/ramsterdam.webp",
         note: null,
       },
       {
         label: "200ml",
         price: 5.99,
-        image: "/images/bottles/ramsterdam.jpg",
+        image: "/images/bottles/ramsterdam.webp",
         note: null,
       },
       {
         label: "375ml",
         price: 9.99,
-        image: "/images/bottles/ramsterdam.jpg",
+        image: "/images/bottles/ramsterdam.webp",
         note: null,
       },
       {
         label: "750ml",
         price: 14.99,
-        image: "/images/bottles/ramsterdam.jpg",
+        image: "/images/bottles/ramsterdam.webp",
         note: null,
       },
     ],
@@ -1070,19 +1070,19 @@ export const products: Product[] = [
       {
         label: "50ml",
         price: 1.5,
-        image: "/images/bottles/aamsterdam.jpg",
+        image: "/images/bottles/aamsterdam.webp",
         note: null,
       },
       {
         label: "375ml",
         price: 9.99,
-        image: "/images/bottles/aamsterdam.jpg",
+        image: "/images/bottles/aamsterdam.webp",
         note: null,
       },
       {
         label: "750ml",
         price: 14.99,
-        image: "/images/bottles/aamsterdam.jpg",
+        image: "/images/bottles/aamsterdam.webp",
         note: null,
       },
     ],
@@ -1097,19 +1097,19 @@ export const products: Product[] = [
       {
         label: "50ml",
         price: 1.5,
-        image: "/images/bottles/phamsterdam.jpg",
+        image: "/images/bottles/phamsterdam.webp",
         note: null,
       },
       {
         label: "375ml",
         price: 9.99,
-        image: "/images/bottles/phamsterdam.jpg",
+        image: "/images/bottles/phamsterdam.webp",
         note: null,
       },
       {
         label: "750ml",
         price: 14.99,
-        image: "/images/bottles/phamsterdam.jpg",
+        image: "/images/bottles/phamsterdam.webp",
         note: null,
       },
     ],
@@ -1124,19 +1124,19 @@ export const products: Product[] = [
       {
         label: "50ml",
         price: 1.5,
-        image: "/images/bottles/pamsterdam.jpg",
+        image: "/images/bottles/pamsterdam.webp",
         note: null,
       },
       {
         label: "375ml",
         price: 9.99,
-        image: "/images/bottles/pamsterdam.jpg",
+        image: "/images/bottles/pamsterdam.webp",
         note: null,
       },
       {
         label: "750ml",
         price: 14.99,
-        image: "/images/bottles/pamsterdam.jpg",
+        image: "/images/bottles/pamsterdam.webp",
         note: null,
       },
     ],
@@ -1151,19 +1151,19 @@ export const products: Product[] = [
       {
         label: "50ml",
         price: 1.5,
-        image: "/images/bottles/wamsterdam.jpg",
+        image: "/images/bottles/wamsterdam.webp",
         note: null,
       },
       {
         label: "375ml",
         price: 9.99,
-        image: "/images/bottles/wamsterdam.jpg",
+        image: "/images/bottles/wamsterdam.webp",
         note: null,
       },
       {
         label: "750ml",
         price: 14.99,
-        image: "/images/bottles/wamsterdam.jpg",
+        image: "/images/bottles/wamsterdam.webp",
         note: null,
       },
     ],
@@ -1178,19 +1178,19 @@ export const products: Product[] = [
       {
         label: "50ml",
         price: 1.5,
-        image: "/images/bottles/pwamsterdam.jpg",
+        image: "/images/bottles/pwamsterdam.webp",
         note: null,
       },
       {
         label: "375ml",
         price: 9.99,
-        image: "/images/bottles/pwamsterdam.jpg",
+        image: "/images/bottles/pwamsterdam.webp",
         note: null,
       },
       {
         label: "750ml",
         price: 14.99,
-        image: "/images/bottles/pwamsterdam.jpg",
+        image: "/images/bottles/pwamsterdam.webp",
         note: null,
       },
     ],
@@ -1205,13 +1205,13 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 24.99,
-        image: "/images/bottles/shakers.jpg",
+        image: "/images/bottles/shakers.webp",
         note: null,
       },
       {
         label: "1.75L",
         price: 39.99,
-        image: "/images/bottles/shakers.jpg",
+        image: "/images/bottles/shakers.webp",
         note: null,
       },
     ],
@@ -1226,7 +1226,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 31.99,
-        image: "/images/bottles/tere.jpg",
+        image: "/images/bottles/tere.webp",
         note: null,
       },
     ],
@@ -1241,7 +1241,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 34.99,
-        image: "/images/bottles/rtere.jpg",
+        image: "/images/bottles/rtere.webp",
         note: null,
       },
     ],
@@ -1256,7 +1256,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 44.99,
-        image: "/images/bottles/atere.jpg",
+        image: "/images/bottles/atere.webp",
         note: null,
       },
     ],
@@ -1271,19 +1271,19 @@ export const products: Product[] = [
       {
         label: "375ml",
         price: 32.99,
-        image: "/images/bottles/dj.jpg",
+        image: "/images/bottles/dj.webp",
         note: null,
       },
       {
         label: "750ml",
         price: 55.0,
-        image: "/images/bottles/dj.jpg",
+        image: "/images/bottles/dj.webp",
         note: null,
       },
       {
         label: "1.75L",
         price: 115.0,
-        image: "/images/bottles/dj175.jpg",
+        image: "/images/bottles/dj175.webp",
         note: null,
       },
     ],
@@ -1298,13 +1298,13 @@ export const products: Product[] = [
       {
         label: "375ml",
         price: 24.99,
-        image: "/images/bottles/herra375.jpg",
+        image: "/images/bottles/herra375.webp",
         note: null,
       },
       {
         label: "750ml",
         price: 44.99,
-        image: "/images/bottles/herra.jpg",
+        image: "/images/bottles/herra.webp",
         note: null,
       },
     ],
@@ -1319,13 +1319,13 @@ export const products: Product[] = [
       {
         label: "375ml",
         price: 26.99,
-        image: "/images/bottles/rherra375.jpg",
+        image: "/images/bottles/rherra375.webp",
         note: null,
       },
       {
         label: "750ml",
         price: 48.99,
-        image: "/images/bottles/rherra.jpg",
+        image: "/images/bottles/rherra.webp",
         note: null,
       },
     ],
@@ -1340,7 +1340,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 29.99,
-        image: "/images/bottles/hornitos.jpg",
+        image: "/images/bottles/hornitos.webp",
         note: null,
       },
     ],
@@ -1355,7 +1355,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 32.99,
-        image: "/images/bottles/espolon.jpg",
+        image: "/images/bottles/espolon.webp",
         note: null,
       },
     ],
@@ -1370,31 +1370,31 @@ export const products: Product[] = [
       {
         label: "50ml",
         price: 6.99,
-        image: "/images/bottles/pat100.jpg",
+        image: "/images/bottles/pat100.webp",
         note: null,
       },
       {
         label: "100ml",
         price: 12.99,
-        image: "/images/bottles/pat100.jpg",
+        image: "/images/bottles/pat100.webp",
         note: null,
       },
       {
         label: "200ml",
         price: 19.99,
-        image: "/images/bottles/pat100.jpg",
+        image: "/images/bottles/pat100.webp",
         note: null,
       },
       {
         label: "375ml",
         price: 28.99,
-        image: "/images/bottles/pat100.jpg",
+        image: "/images/bottles/pat100.webp",
         note: null,
       },
       {
         label: "750ml",
         price: 49.99,
-        image: "/images/bottles/pat.jpg",
+        image: "/images/bottles/pat.webp",
         note: null,
       },
     ],
@@ -1409,7 +1409,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 59.99,
-        image: "/images/bottles/apat.jpg",
+        image: "/images/bottles/apat.webp",
         note: null,
       },
     ],
@@ -1424,7 +1424,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 54.99,
-        image: "/images/bottles/rpat.jpg",
+        image: "/images/bottles/rpat.webp",
         note: null,
       },
     ],
@@ -1439,7 +1439,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 45.99,
-        image: "/images/bottles/xopat.jpg",
+        image: "/images/bottles/xopat.webp",
         note: null,
       },
     ],
@@ -1454,7 +1454,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 129.99,
-        image: "/images/bottles/cpat.jpg",
+        image: "/images/bottles/cpat.webp",
         note: null,
       },
     ],
@@ -1469,25 +1469,25 @@ export const products: Product[] = [
       {
         label: "50ml",
         price: 3.5,
-        image: "/images/bottles/jameson50.jpg",
+        image: "/images/bottles/jameson50.webp",
         note: null,
       },
       {
         label: "200ml",
         price: 11.99,
-        image: "/images/bottles/jameson200.jpg",
+        image: "/images/bottles/jameson200.webp",
         note: null,
       },
       {
         label: "375ml",
         price: 19.99,
-        image: "/images/bottles/jameson375.jpg",
+        image: "/images/bottles/jameson375.webp",
         note: null,
       },
       {
         label: "750ml",
         price: 32.99,
-        image: "/images/bottles/jameson.jpg",
+        image: "/images/bottles/jameson.webp",
         note: null,
       },
     ],
@@ -1502,7 +1502,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 34.99,
-        image: "/images/bottles/buchanan.jpg",
+        image: "/images/bottles/buchanan.webp",
         note: null,
       },
     ],
@@ -1517,7 +1517,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 32.99,
-        image: "/images/bottles/pbuchanan.jpg",
+        image: "/images/bottles/pbuchanan.webp",
         note: null,
       },
     ],
@@ -1532,7 +1532,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 45.99,
-        image: "/images/bottles/henny.jpg",
+        image: "/images/bottles/henny.webp",
         note: null,
       },
     ],
@@ -1547,7 +1547,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 59.99,
-        image: "/images/bottles/vsophenny.jpg",
+        image: "/images/bottles/vsophenny.webp",
         note: null,
       },
     ],
@@ -1562,7 +1562,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 38.99,
-        image: "/images/bottles/bjohnnie.jpg",
+        image: "/images/bottles/bjohnnie.webp",
         note: null,
       },
     ],
@@ -1577,7 +1577,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 24.99,
-        image: "/images/bottles/rjohnnie.jpg",
+        image: "/images/bottles/rjohnnie.webp",
         note: null,
       },
     ],
@@ -1592,7 +1592,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 59.99,
-        image: "/images/bottles/brenne.jpg",
+        image: "/images/bottles/brenne.webp",
         note: null,
       },
     ],
@@ -1607,7 +1607,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 32.99,
-        image: "/images/bottles/bullit.jpg",
+        image: "/images/bottles/bullit.webp",
         note: null,
       },
     ],
@@ -1622,7 +1622,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 32.99,
-        image: "/images/bottles/rbulliet.jpg",
+        image: "/images/bottles/rbulliet.webp",
         note: null,
       },
     ],
@@ -1637,7 +1637,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 45.99,
-        image: "/images/bottles/tenbulliet.jpg",
+        image: "/images/bottles/tenbulliet.webp",
         note: null,
       },
     ],
@@ -1652,13 +1652,13 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 24.99,
-        image: "/images/bottles/dewars.jpg",
+        image: "/images/bottles/dewars.webp",
         note: null,
       },
       {
         label: "1.75L",
         price: 42.99,
-        image: "/images/bottles/dewars.jpg",
+        image: "/images/bottles/dewars.webp",
         note: null,
       },
     ],
@@ -1673,7 +1673,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 15.99,
-        image: "/images/bottles/ew.jpg",
+        image: "/images/bottles/ew.webp",
         note: null,
       },
     ],
@@ -1688,7 +1688,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 15.99,
-        image: "/images/bottles/aew.jpg",
+        image: "/images/bottles/aew.webp",
         note: null,
       },
     ],
@@ -1703,7 +1703,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 15.99,
-        image: "/images/bottles/pew.jpg",
+        image: "/images/bottles/pew.webp",
         note: null,
       },
     ],
@@ -1718,13 +1718,13 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 18.99,
-        image: "/images/bottles/fireball.jpg",
+        image: "/images/bottles/fireball.webp",
         note: null,
       },
       {
         label: "1L",
         price: 24.99,
-        image: "/images/bottles/fireball.jpg",
+        image: "/images/bottles/fireball.webp",
         note: null,
       },
     ],
@@ -1739,13 +1739,13 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 28.99,
-        image: "/images/bottles/jack.jpg",
+        image: "/images/bottles/jack.webp",
         note: null,
       },
       {
         label: "1L",
         price: 36.99,
-        image: "/images/bottles/jack.jpg",
+        image: "/images/bottles/jack.webp",
         note: null,
       },
     ],
@@ -1760,7 +1760,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 34.99,
-        image: "/images/bottles/bjack.jpg",
+        image: "/images/bottles/bjack.webp",
         note: null,
       },
     ],
@@ -1775,7 +1775,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 34.99,
-        image: "/images/bottles/brjack.jpg",
+        image: "/images/bottles/brjack.webp",
         note: null,
       },
     ],
@@ -1790,7 +1790,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 54.99,
-        image: "/images/bottles/sbjack.jpg",
+        image: "/images/bottles/sbjack.webp",
         note: null,
       },
     ],
@@ -1805,7 +1805,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 28.99,
-        image: "/images/bottles/hjack.jpg",
+        image: "/images/bottles/hjack.webp",
         note: null,
       },
     ],
@@ -1820,7 +1820,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 28.99,
-        image: "/images/bottles/fjack.jpg",
+        image: "/images/bottles/fjack.webp",
         note: null,
       },
     ],
@@ -1835,7 +1835,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 28.99,
-        image: "/images/bottles/ajack.jpg",
+        image: "/images/bottles/ajack.webp",
         note: null,
       },
     ],
@@ -1850,7 +1850,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 32.99,
-        image: "/images/bottles/ojameson.jpg",
+        image: "/images/bottles/ojameson.webp",
         note: null,
       },
     ],
@@ -1865,7 +1865,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 31.99,
-        image: "/images/bottles/makers.jpg",
+        image: "/images/bottles/makers.webp",
         note: null,
       },
     ],
@@ -1880,7 +1880,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 39.99,
-        image: "/images/bottles/makers46.jpg",
+        image: "/images/bottles/makers46.webp",
         note: null,
       },
     ],
@@ -1895,13 +1895,13 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 27.99,
-        image: "/images/bottles/twelve.jpg",
+        image: "/images/bottles/twelve.webp",
         note: null,
       },
       {
         label: "1.75L",
         price: 48.99,
-        image: "/images/bottles/twelve.jpg",
+        image: "/images/bottles/twelve.webp",
         note: null,
       },
     ],
@@ -1916,7 +1916,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 24.99,
-        image: "/images/bottles/salignoc.jpg",
+        image: "/images/bottles/salignoc.webp",
         note: null,
       },
     ],
@@ -1931,7 +1931,7 @@ export const products: Product[] = [
       {
         label: "1.75L",
         price: 32.99,
-        image: "/images/bottles/seagrams.jpg",
+        image: "/images/bottles/seagrams.webp",
         note: null,
       },
     ],
@@ -1946,7 +1946,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 29.99,
-        image: "/images/bottles/tullamore.jpg",
+        image: "/images/bottles/tullamore.webp",
         note: null,
       },
     ],
@@ -1961,7 +1961,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 26.0,
-        image: "/images/bottles/toki.jpg",
+        image: "/images/bottles/toki.webp",
         note: null,
       },
     ],
@@ -1976,7 +1976,7 @@ export const products: Product[] = [
       {
         label: "1L",
         price: 22.99,
-        image: "/images/bottles/alize.jpg",
+        image: "/images/bottles/alize.webp",
         note: null,
       },
     ],
@@ -1991,7 +1991,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 29.99,
-        image: "/images/bottles/chbaileys.jpg",
+        image: "/images/bottles/chbaileys.webp",
         note: null,
       },
     ],
@@ -2006,7 +2006,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 29.99,
-        image: "/images/bottles/cbaileys.jpg",
+        image: "/images/bottles/cbaileys.webp",
         note: null,
       },
     ],
@@ -2021,7 +2021,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 29.99,
-        image: "/images/bottles/ccbaileys.jpg",
+        image: "/images/bottles/ccbaileys.webp",
         note: null,
       },
     ],
@@ -2036,7 +2036,7 @@ export const products: Product[] = [
       {
         label: "1.75L",
         price: 54.99,
-        image: "/images/bottles/baileys.jpg",
+        image: "/images/bottles/baileys.webp",
         note: null,
       },
     ],
@@ -2051,19 +2051,19 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 14.99,
-        image: "/images/bottles/bradys.jpg",
+        image: "/images/bottles/bradys.webp",
         note: null,
       },
       {
         label: "1L",
         price: 19.99,
-        image: "/images/bottles/bradys.jpg",
+        image: "/images/bottles/bradys.webp",
         note: null,
       },
       {
         label: "1.75L",
         price: 29.99,
-        image: "/images/bottles/bradys.jpg",
+        image: "/images/bottles/bradys.webp",
         note: null,
       },
     ],
@@ -2078,7 +2078,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 15.99,
-        image: "/images/bottles/diamore.jpg",
+        image: "/images/bottles/diamore.webp",
         note: null,
       },
     ],
@@ -2093,7 +2093,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 11.99,
-        image: "/images/bottles/dbbc.jpg",
+        image: "/images/bottles/dbbc.webp",
         note: null,
       },
     ],
@@ -2108,7 +2108,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 18.99,
-        image: "/images/bottles/lfabrizio.jpg",
+        image: "/images/bottles/lfabrizio.webp",
         note: null,
       },
     ],
@@ -2123,7 +2123,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 14.99,
-        image: "/images/bottles/frago.jpg",
+        image: "/images/bottles/frago.webp",
         note: null,
       },
     ],
@@ -2138,7 +2138,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 26.99,
-        image: "/images/bottles/jager.jpg",
+        image: "/images/bottles/jager.webp",
         note: null,
       },
     ],
@@ -2153,7 +2153,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 24.99,
-        image: "/images/bottles/dunkin.jpg",
+        image: "/images/bottles/dunkin.webp",
         note: null,
       },
     ],
@@ -2168,7 +2168,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 12.99,
-        image: "/images/bottles/allords.jpg",
+        image: "/images/bottles/allords.webp",
         note: null,
       },
     ],
@@ -2183,7 +2183,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 12.99,
-        image: "/images/bottles/cllords.jpg",
+        image: "/images/bottles/cllords.webp",
         note: null,
       },
     ],
@@ -2198,7 +2198,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 12.99,
-        image: "/images/bottles/pllords.jpg",
+        image: "/images/bottles/pllords.webp",
         note: null,
       },
     ],
@@ -2213,7 +2213,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 12.99,
-        image: "/images/bottles/aboston.jpg",
+        image: "/images/bottles/aboston.webp",
         note: null,
       },
     ],
@@ -2228,13 +2228,13 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 24.99,
-        image: "/images/bottles/sambvca.jpg",
+        image: "/images/bottles/sambvca.webp",
         note: null,
       },
       {
         label: "1L",
         price: 32.99,
-        image: "/images/bottles/sambvca.jpg",
+        image: "/images/bottles/sambvca.webp",
         note: null,
       },
     ],
@@ -2249,19 +2249,19 @@ export const products: Product[] = [
       {
         label: "50ml",
         price: 2.0,
-        image: "/images/bottles/gbacardi.jpg",
+        image: "/images/bottles/gbacardi.webp",
         note: null,
       },
       {
         label: "375ml",
         price: 11.99,
-        image: "/images/bottles/gbacardi.jpg",
+        image: "/images/bottles/gbacardi.webp",
         note: null,
       },
       {
         label: "750ml",
         price: 20.0,
-        image: "/images/bottles/gbacardi.jpg",
+        image: "/images/bottles/gbacardi.webp",
         note: null,
       },
     ],
@@ -2276,19 +2276,19 @@ export const products: Product[] = [
       {
         label: "50ml",
         price: 2.0,
-        image: "/images/bottles/lbacardi.jpg",
+        image: "/images/bottles/lbacardi.webp",
         note: null,
       },
       {
         label: "375ml",
         price: 11.99,
-        image: "/images/bottles/lbacardi.jpg",
+        image: "/images/bottles/lbacardi.webp",
         note: null,
       },
       {
         label: "750ml",
         price: 20.0,
-        image: "/images/bottles/lbacardi.jpg",
+        image: "/images/bottles/lbacardi.webp",
         note: null,
       },
     ],
@@ -2303,19 +2303,19 @@ export const products: Product[] = [
       {
         label: "50ml",
         price: 2.0,
-        image: "/images/bottles/wbacardi.jpg",
+        image: "/images/bottles/wbacardi.webp",
         note: null,
       },
       {
         label: "375ml",
         price: 11.99,
-        image: "/images/bottles/wbacardi.jpg",
+        image: "/images/bottles/wbacardi.webp",
         note: null,
       },
       {
         label: "750ml",
         price: 20.0,
-        image: "/images/bottles/wbacardi.jpg",
+        image: "/images/bottles/wbacardi.webp",
         note: null,
       },
     ],
@@ -2330,7 +2330,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 20.0,
-        image: "/images/bottles/clmorgan.jpg",
+        image: "/images/bottles/clmorgan.webp",
         note: null,
       },
     ],
@@ -2345,7 +2345,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 20.0,
-        image: "/images/bottles/smorgan.jpg",
+        image: "/images/bottles/smorgan.webp",
         note: null,
       },
     ],
@@ -2360,7 +2360,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 21.99,
-        image: "/images/bottles/kuya.jpg",
+        image: "/images/bottles/kuya.webp",
         note: null,
       },
     ],
@@ -2375,7 +2375,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 21.99,
-        image: "/images/bottles/malibu.jpg",
+        image: "/images/bottles/malibu.webp",
         note: null,
       },
     ],
@@ -2390,7 +2390,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 13.99,
-        image: "/images/bottles/pcupcake.jpg",
+        image: "/images/bottles/pcupcake.webp",
         note: null,
       },
     ],
@@ -2405,7 +2405,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 17.99,
-        image: "/images/bottles/plamarca.jpg",
+        image: "/images/bottles/plamarca.webp",
         note: null,
       },
     ],
@@ -2420,7 +2420,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 17.99,
-        image: "/images/bottles/prlamarca.jpg",
+        image: "/images/bottles/prlamarca.webp",
         note: null,
       },
     ],
@@ -2435,7 +2435,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 15.99,
-        image: "/images/bottles/martini.jpg",
+        image: "/images/bottles/martini.webp",
         note: null,
       },
     ],
@@ -2450,7 +2450,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 16.99,
-        image: "/images/bottles/pmoinetto.jpg",
+        image: "/images/bottles/pmoinetto.webp",
         note: null,
       },
     ],
@@ -2465,7 +2465,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 12.99,
-        image: "/images/bottles/nfrag.jpg",
+        image: "/images/bottles/nfrag.webp",
         note: null,
       },
     ],
@@ -2480,7 +2480,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 14.99,
-        image: "/images/bottles/mandre.jpg",
+        image: "/images/bottles/mandre.webp",
         note: null,
       },
     ],
@@ -2495,7 +2495,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 14.99,
-        image: "/images/bottles/mruffino.jpg",
+        image: "/images/bottles/mruffino.webp",
         note: null,
       },
     ],
@@ -2510,7 +2510,7 @@ export const products: Product[] = [
       {
         label: "750ml",
         price: 12.99,
-        image: "/images/bottles/pmarina.jpg",
+        image: "/images/bottles/pmarina.webp",
         note: null,
       },
     ],
@@ -2525,37 +2525,37 @@ export const products: Product[] = [
       {
         label: "Tequila Rita",
         price: 4.25,
-        image: "/images/bottles/tbuzz.jpg",
+        image: "/images/bottles/tbuzz.webp",
         note: "A vibrant take on the classic margarita. Crafted with premium silver tequila and crisp lime, it delivers a smooth, tart, and legendary citrus punch.",
       },
       {
         label: "Mango Chiller",
         price: 4.25,
-        image: "/images/bottles/mbuzz.jpg",
+        image: "/images/bottles/mbuzz.webp",
         note: "A tropical escape in every sip. This cocktail blends premium vodka with authentic, juicy mango flavors for a sweet and refreshing finish.",
       },
       {
         label: "Lotta Colada",
         price: 4.25,
-        image: "/images/bottles/cbuzz.jpg",
+        image: "/images/bottles/cbuzz.webp",
         note: "A tropical vacation in a ball. Rich coconut cream and sweet pineapple juice blended with premium rum.",
       },
       {
         label: "Espresso Martini",
         price: 4.25,
-        image: "/images/bottles/ebuzz.jpg",
+        image: "/images/bottles/ebuzz.webp",
         note: "Bold roasted coffee notes and premium vodka for a smooth, caffeinated cocktail experience.",
       },
       {
         label: "Berry Cherry Limeade",
         price: 4.25,
-        image: "/images/bottles/bluebuzz.jpg",
+        image: "/images/bottles/bluebuzz.webp",
         note: "A refreshing blast of bright blue raspberry, cherry, and lime flavors.",
       },
       {
         label: "Choc Tease",
         price: 4.25,
-        image: "/images/bottles/chocbuzz.jpg",
+        image: "/images/bottles/chocbuzz.webp",
         note: "Indulgent and creamy, this vodka-based cocktail tastes like liquid chocolate silk.",
       },
     ],
@@ -2570,13 +2570,13 @@ export const products: Product[] = [
       {
         label: "Individual",
         price: 5.4,
-        image: "/images/bottles/soju.jpg",
+        image: "/images/bottles/soju.webp",
         note: null,
       },
       {
         label: "Box",
         price: 32.5,
-        image: "/images/bottles/soju.jpg",
+        image: "/images/bottles/soju.webp",
         note: null,
       },
     ],
@@ -2591,13 +2591,13 @@ export const products: Product[] = [
       {
         label: "Individual",
         price: 3.5,
-        image: "/images/bottles/highnoon.jpg",
+        image: "/images/bottles/highnoon.webp",
         note: null,
       },
       {
         label: "Box",
         price: 28.0,
-        image: "/images/bottles/highnoon.jpg",
+        image: "/images/bottles/highnoon.webp",
         note: null,
       },
     ],
@@ -2612,13 +2612,13 @@ export const products: Product[] = [
       {
         label: "Individual",
         price: 3.5,
-        image: "/images/bottles/cokejack.jpg",
+        image: "/images/bottles/cokejack.webp",
         note: null,
       },
       {
         label: "Box",
         price: 14.0,
-        image: "/images/bottles/cokejack.jpg",
+        image: "/images/bottles/cokejack.webp",
         note: null,
       },
     ],

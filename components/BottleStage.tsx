@@ -7,12 +7,11 @@ import { cn } from "@/lib/utils";
  * a soft elliptical "shelf shadow" underneath so every bottle — regardless of
  * its source photo's aspect ratio — reads as standing on the same shelf.
  *
- * Source photography is shot on a plain white background. Rather than a
- * harsh white rectangle sitting on the dark theme, the photo is blended
- * (`mix-blend-multiply`) against a soft brass-tinted glow: white pixels drop
- * out to reveal the card's own dark surface underneath, while the bottle
- * itself stays put — closer to a bottle standing in soft cellar light than a
- * product photo pasted on top of the page.
+ * Source photography is shot on a plain white background. The bundled
+ * photos (`public/images/bottles/*.webp`) have already had that background
+ * keyed out to real alpha transparency and their colors given a slight lift,
+ * so the bottle renders at full, vivid color sitting in a soft brass glow
+ * instead of a harsh white rectangle or a blend-darkened silhouette.
  */
 export default function BottleStage({
   src,
@@ -66,7 +65,7 @@ export default function BottleStage({
           fill
           sizes="(max-width: 640px) 45vw, 220px"
           priority={priority}
-          className="object-contain object-bottom mix-blend-multiply drop-shadow-[0_10px_14px_rgba(0,0,0,0.5)]"
+          className="object-contain object-bottom drop-shadow-[0_10px_14px_rgba(0,0,0,0.5)]"
         />
       </div>
     </div>

@@ -1,26 +1,26 @@
-const QUOTES = [
-  {
-    line: "Every bottle on this shelf, I\u2019d pour for my own family.",
-    attribution: "Junior",
-  },
-  {
-    line: "Family-owned since day one \u2014 the best selection in Brooklyn, period.",
-    attribution: "Est. Bath Avenue",
-  },
-];
+import { cn } from "@/lib/utils";
 
-export default function StoreQuotes() {
+/**
+ * A single tasteful pull-quote: thin gold rule, italic serif line, small
+ * brass attribution. Used once near the top of the shelf and once near the
+ * footer (see `ShopClient` and `SiteChrome`).
+ */
+export default function StoreQuote({
+  line,
+  attribution,
+  className,
+}: {
+  line: string;
+  attribution?: string;
+  className?: string;
+}) {
   return (
-    <section className="grid gap-5 sm:grid-cols-2">
-      {QUOTES.map((quote) => (
-        <figure key={quote.attribution} className="flex flex-col items-center gap-3 text-center">
-          <span className="h-px w-8 bg-brass/50" />
-          <blockquote className="font-serif text-lg italic leading-snug text-cream-muted sm:text-xl">
-            &ldquo;{quote.line}&rdquo;
-          </blockquote>
-          <figcaption className="eyebrow text-[9px] text-brass">{quote.attribution}</figcaption>
-        </figure>
-      ))}
-    </section>
+    <figure className={cn("flex flex-col items-center gap-3 text-center", className)}>
+      <span className="h-px w-8 bg-brass/50" />
+      <blockquote className="max-w-md font-serif text-lg italic leading-snug text-cream-muted sm:text-xl">
+        &ldquo;{line}&rdquo;
+      </blockquote>
+      {attribution && <figcaption className="eyebrow text-[9px] text-brass">{attribution}</figcaption>}
+    </figure>
   );
 }
