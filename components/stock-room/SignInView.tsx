@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { TriangleAlert, LoaderCircle, KeyRound } from "lucide-react";
+import { TriangleAlert, LoaderCircle } from "lucide-react";
 import { useInventory } from "@/lib/inventory/provider";
 import { isFirebaseConfigured } from "@/lib/firebase";
 
@@ -26,47 +26,37 @@ export default function SignInView() {
   }
 
   return (
-    <div className="mx-auto max-w-md px-4 pb-20 pt-10 sm:px-0">
-      <p className="eyebrow text-[9px] text-brass">Staff only</p>
-      <h1 className="mt-2 font-serif text-3xl font-bold text-cream">Manager sign-in</h1>
-      <p className="mt-2.5 text-[13.5px] leading-relaxed text-cream-muted">
-        {isFirebaseConfigured
-          ? "Use the Firebase Authentication account you created for the store. Customers never see this screen."
-          : "No Firebase project is connected yet, so the Stock Room is running in local demo mode. Enter the demo passcode to try it out."}
-      </p>
+    <div className="mx-auto flex min-h-[70vh] max-w-sm flex-col items-center justify-center px-4 py-10">
+      <span className="flex h-11 w-11 items-center justify-center rounded-full border border-brass/40">
+        <span className="font-serif text-sm font-bold text-brass">21</span>
+      </span>
+      <h1 className="mt-4 font-serif text-2xl font-bold text-cream">Stock Room</h1>
 
-      <form onSubmit={handleSubmit} className="mt-7 flex flex-col gap-4">
+      <form onSubmit={handleSubmit} className="mt-7 flex w-full flex-col gap-3.5">
         {isFirebaseConfigured ? (
           <>
             <Field
-              label="Email"
-              placeholder="owner@juniors.com"
+              placeholder="Email"
               value={email}
               onChange={setEmail}
               type="email"
+              autoFocus
             />
-            <Field
-              label="Password"
-              placeholder="••••••••"
-              value={password}
-              onChange={setPassword}
-              type="password"
-            />
+            <Field placeholder="Password" value={password} onChange={setPassword} type="password" />
           </>
         ) : (
           <Field
-            label="Demo passcode"
-            placeholder="Ask the developer for the demo passcode"
+            placeholder="Passcode"
             value={passcode}
             onChange={setPasscode}
             type="password"
-            icon={<KeyRound size={13} />}
+            autoFocus
           />
         )}
 
         {manager.error && (
-          <div className="flex items-start gap-2.5 rounded-xl border border-claret/45 bg-claret/15 px-3.5 py-3">
-            <TriangleAlert size={14} className="mt-0.5 shrink-0 text-claret" strokeWidth={2.25} />
+          <div className="flex items-center gap-2 rounded-xl border border-claret/45 bg-claret/15 px-3.5 py-2.5">
+            <TriangleAlert size={13} className="shrink-0 text-claret" strokeWidth={2.25} />
             <p className="text-[12.5px] text-cream">{manager.error}</p>
           </div>
         )}
@@ -81,68 +71,33 @@ export default function SignInView() {
           {manager.isBusy ? "Signing in" : "Sign in"}
         </button>
       </form>
-
-      <div className="mt-8 rounded-2xl border border-hairline/60 bg-surface/50 p-4">
-        <p className="eyebrow text-[9px] text-cream-faint">Where to find this</p>
-        <ul className="mt-2.5 flex flex-col gap-2 text-[12.5px] text-cream-muted">
-          {isFirebaseConfigured ? (
-            <>
-              <Hint text="Firebase console → Authentication → Users → Add user" />
-              <Hint text="Enable the Email/Password provider first" />
-              <Hint text="Only signed-in accounts can change prices or stock" />
-            </>
-          ) : (
-            <>
-              <Hint text="Set NEXT_PUBLIC_FIREBASE_* env vars to connect a real project" />
-              <Hint text="Until then, set NEXT_PUBLIC_DEMO_STOCK_ROOM_PASSCODE to control demo access" />
-              <Hint text="Demo edits are stored in this browser only" />
-            </>
-          )}
-        </ul>
-      </div>
     </div>
   );
 }
 
 function Field({
-  label,
   placeholder,
   value,
   onChange,
   type,
-  icon,
+  autoFocus,
 }: {
-  label: string;
   placeholder: string;
   value: string;
   onChange: (v: string) => void;
   type: string;
-  icon?: React.ReactNode;
+  autoFocus?: boolean;
 }) {
   return (
-    <label className="flex flex-col gap-2">
-      <span className="eyebrow text-[9px] text-cream-faint">{label}</span>
-      <div className="flex items-center gap-2 rounded-xl border border-hairline bg-surface px-3.5 py-3.5 focus-within:border-brass/60">
-        {icon && <span className="text-cream-faint">{icon}</span>}
-        <input
-          type={type}
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          placeholder={placeholder}
-          autoCapitalize="none"
-          autoCorrect="off"
-          className="w-full bg-transparent font-mono text-[14px] text-cream placeholder:text-cream-faint focus:outline-none"
-        />
-      </div>
-    </label>
-  );
-}
-
-function Hint({ text }: { text: string }) {
-  return (
-    <li className="flex items-start gap-2">
-      <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-brass/80" />
-      {text}
-    </li>
+    <input
+      type={type}
+      value={value}
+      onChange={(e) => onChange(e.target.value)}
+      placeholder={placeholder}
+      autoFocus={autoFocus}
+      autoCapitalize="none"
+      autoCorrect="off"
+      className="w-full rounded-xl border border-hairline bg-surface px-4 py-3.5 text-center font-mono text-[15px] tracking-wide text-cream placeholder:text-cream-faint focus:border-brass/60 focus:outline-none"
+    />
   );
 }

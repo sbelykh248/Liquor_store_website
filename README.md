@@ -96,7 +96,7 @@ Without `NEXT_PUBLIC_FIREBASE_*` set:
 - The Shelf shows an "Offline catalog · demo data" pill and serves bundled
   prices/stock.
 - `/stock-room` accepts a simple passcode (`NEXT_PUBLIC_DEMO_STOCK_ROOM_PASSCODE`,
-  defaults to `junior21`) instead of a real sign-in.
+  defaults to `juniors2026`) instead of a real sign-in.
 - Manager edits are written to `localStorage` on the visiting browser only —
   great for demos, not shared across devices. Connecting Firebase switches
   every one of these over automatically.
