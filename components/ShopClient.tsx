@@ -16,10 +16,10 @@ import BottleCard from "@/components/BottleCard";
 import TopShelfCard from "@/components/TopShelfCard";
 import CategoryRail from "@/components/CategoryRail";
 import SortMenu from "@/components/SortMenu";
-import SyncStatusPill from "@/components/SyncStatusPill";
+import StoreQuotes from "@/components/StoreQuotes";
 
 export default function ShopClient() {
-  const { products, syncState, lastSyncedAt, refresh } = useInventory();
+  const { products } = useInventory();
   const { isSaved, toggle } = useSavedProducts();
 
   const [category, setCategory] = useState<CategoryId>("all");
@@ -52,20 +52,21 @@ export default function ShopClient() {
           <span className="eyebrow text-[9px]">Est. Brooklyn</span>
           <span className="h-px w-8 bg-brass/50" />
         </div>
-        <h1 className="mt-3 bg-gradient-to-b from-cream to-cream/70 bg-clip-text font-serif text-4xl font-bold tracking-wide text-transparent sm:text-6xl">
+        <h1 className="mt-3 inline-block bg-gradient-to-b from-cream to-cream/70 bg-clip-text px-2 font-serif text-4xl font-bold leading-[1.15] tracking-wide text-transparent sm:text-6xl">
           JUNIOR&apos;S
         </h1>
         <p className="eyebrow mt-2 text-[11px] text-cream-muted">Wine &amp; Liquor</p>
-        <div className="mt-4">
-          <SyncStatusPill state={syncState} lastSyncedAt={lastSyncedAt} onRetry={refresh} />
-        </div>
 
-        <div className="mt-7 grid w-full max-w-xl grid-cols-3 divide-x divide-hairline/70 rounded-2xl border border-hairline/60 bg-surface/70 py-3.5">
+        <div className="mt-6 grid w-full max-w-xl grid-cols-3 divide-x divide-hairline/70 rounded-2xl border border-hairline/60 bg-surface/70 py-3.5">
           <StoreStat icon={MapPin} top="1654 Bath Ave" bottom="Brooklyn, NY" />
           <StoreStat icon={Clock} top="Open Today" bottom="1PM – 8PM" />
           <StoreStat icon={Phone} top="718 331" bottom="6868" />
         </div>
       </section>
+
+      <div className="mt-10 sm:mt-12">
+        <StoreQuotes />
+      </div>
 
       {/* Top shelf marquee */}
       {query === "" && category === "all" && featured.length > 0 && (

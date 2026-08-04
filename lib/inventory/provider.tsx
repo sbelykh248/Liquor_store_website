@@ -26,7 +26,7 @@ const DEMO_SESSION_KEY = "juniors:demo-manager-session:v1";
  * real data. Once `NEXT_PUBLIC_FIREBASE_*` env vars are set, real
  * email/password sign-in (Firebase Auth) takes over automatically.
  */
-const DEMO_PASSCODE = process.env.NEXT_PUBLIC_DEMO_STOCK_ROOM_PASSCODE || "junior21";
+const DEMO_PASSCODE = process.env.NEXT_PUBLIC_DEMO_STOCK_ROOM_PASSCODE || "juniors2026";
 
 interface ManagerState {
   isSignedIn: boolean;
