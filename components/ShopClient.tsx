@@ -64,11 +64,8 @@ export default function ShopClient() {
         </div>
       </section>
 
-      <div className="mt-10 sm:mt-12">
-        <StoreQuote
-          line="Don't let a moments pleasure lead to a lifetime of misery"
-          attribution="Junior"
-        />
+      <div className="mt-12 sm:mt-16">
+        <StoreQuote line="Do everything in moderation." attribution="The Junior's Philosophy" variant="primary" />
       </div>
 
       {/* Top shelf marquee */}

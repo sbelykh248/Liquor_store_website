@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { Search, X, RotateCcw, ChevronRight, RefreshCw, SlidersHorizontal } from "lucide-react";
 import { useInventory } from "@/lib/inventory/provider";
+import { usePersistentState } from "@/lib/use-persistent-state";
 import { matchesQuery, isFullySoldOut, heroImage } from "@/lib/product-helpers";
 import { formatPrice, cn } from "@/lib/utils";
 import BottleStage from "@/components/BottleStage";
@@ -13,8 +14,8 @@ type Filter = "all" | "inStock" | "soldOut";
 
 export default function StockRoomDashboard() {
   const { products, toggleProductSoldOut, isFirebaseConfigured } = useInventory();
-  const [query, setQuery] = useState("");
-  const [filter, setFilter] = useState<Filter>("all");
+  const [query, setQuery] = usePersistentState("juniors:stock-room-search:v1", "");
+  const [filter, setFilter] = usePersistentState<Filter>("juniors:stock-room-filter:v1", "all");
   const [busyId, setBusyId] = useState<string | null>(null);
   const [editing, setEditing] = useState<Product | null>(null);
 

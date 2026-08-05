@@ -84,7 +84,7 @@ export default function VisitPage() {
       </div>
 
       <div className="mt-12">
-        <StoreQuote line="Family-owned since day one" attribution="Junior's Wine & Liquor" />
+        <StoreQuote line="Don't let a moments pleasure lead to a lifetime of misery" attribution="Junior" />
       </div>
 
       <div className="mt-8 flex flex-col items-center gap-2 text-center">

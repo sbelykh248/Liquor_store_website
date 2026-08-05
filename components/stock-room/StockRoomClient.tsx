@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
 import { LogOut, RefreshCw } from "lucide-react";
 import { useInventory } from "@/lib/inventory/provider";
+import { usePersistentState } from "@/lib/use-persistent-state";
 import { cn } from "@/lib/utils";
 import SignInView from "@/components/stock-room/SignInView";
 import StockRoomDashboard from "@/components/stock-room/StockRoomDashboard";
@@ -19,7 +19,7 @@ const TABS: { id: StockRoomTab; label: string }[] = [
 
 export default function StockRoomClient() {
   const { manager, signOut, refresh, isFirebaseConfigured } = useInventory();
-  const [tab, setTab] = useState<StockRoomTab>("inventory");
+  const [tab, setTab] = usePersistentState<StockRoomTab>("juniors:stock-room-tab:v1", "inventory");
 
   if (!manager.isSignedIn) return <SignInView />;
 

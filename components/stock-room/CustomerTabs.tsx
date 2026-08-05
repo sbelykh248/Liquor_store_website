@@ -4,13 +4,14 @@ import { useMemo, useState } from "react";
 import { Plus, Trash2, Check, RotateCcw, Info } from "lucide-react";
 import { useCustomerTabs } from "@/lib/use-customer-tabs";
 import type { TabStatus } from "@/lib/use-customer-tabs";
+import { usePersistentState } from "@/lib/use-persistent-state";
 import { formatPrice, cn } from "@/lib/utils";
 
 type Filter = "all" | "open" | "paid";
 
 export default function CustomerTabs() {
   const { tabs, addTab, updateTab, removeTab } = useCustomerTabs();
-  const [filter, setFilter] = useState<Filter>("open");
+  const [filter, setFilter] = usePersistentState<Filter>("juniors:customer-tabs-filter:v1", "open");
   const [name, setName] = useState("");
   const [amount, setAmount] = useState("");
   const [note, setNote] = useState("");
