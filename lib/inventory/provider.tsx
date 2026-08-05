@@ -27,6 +27,7 @@ const DEMO_SESSION_KEY = "juniors:demo-manager-session:v1";
  * email/password sign-in (Firebase Auth) takes over automatically.
  */
 const DEMO_PASSCODE = process.env.NEXT_PUBLIC_DEMO_STOCK_ROOM_PASSCODE || "juniors2026";
+const MANAGER_EMAIL = "manager@juniorswineliquor.com";
 
 interface ManagerState {
   isSignedIn: boolean;
@@ -154,9 +155,9 @@ export function InventoryProvider({ children }: { children: ReactNode }) {
         });
       });
     } else if (typeof window !== "undefined") {
-      const signedIn = window.sessionStorage.getItem(DEMO_SESSION_KEY) === "true";
+      const signedIn = window.localStorage.getItem(DEMO_SESSION_KEY) === "true";
       if (signedIn) {
-        setManager((m) => ({ ...m, isSignedIn: true, email: "manager@juniors.demo" }));
+        setManager((m) => ({ ...m, isSignedIn: true, email: MANAGER_EMAIL }));
       }
     }
   }, []);
@@ -197,11 +198,11 @@ export function InventoryProvider({ children }: { children: ReactNode }) {
     // Local demo mode.
     await new Promise((r) => setTimeout(r, 350));
     if (emailOrPasscode.trim() === DEMO_PASSCODE) {
-      window.sessionStorage.setItem(DEMO_SESSION_KEY, "true");
+      window.localStorage.setItem(DEMO_SESSION_KEY, "true");
       setManager((m) => ({
         ...m,
         isSignedIn: true,
-        email: "manager@juniors.demo",
+        email: MANAGER_EMAIL,
         isBusy: false,
         error: null,
       }));
@@ -219,7 +220,7 @@ export function InventoryProvider({ children }: { children: ReactNode }) {
     if (isFirebaseConfigured && auth) {
       import("firebase/auth").then(({ signOut: fbSignOut }) => fbSignOut(auth!));
     } else {
-      window.sessionStorage.removeItem(DEMO_SESSION_KEY);
+      window.localStorage.removeItem(DEMO_SESSION_KEY);
     }
     setManager((m) => ({ ...m, isSignedIn: false, email: null }));
   }, []);
