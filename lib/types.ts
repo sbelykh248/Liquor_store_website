@@ -27,6 +27,8 @@ export interface Variant {
   note: string | null;
   /** Set by the live inventory layer — never present in the bundled data. */
   isSoldOut?: boolean;
+  /** On-hand count, set by the Stock Room — never present in the bundled data. */
+  quantity?: number;
 }
 
 export interface Product {
@@ -87,5 +89,6 @@ export interface ProductOverride {
     label: string;
     price?: number;
     soldOut?: boolean;
+    quantity?: number;
   }[];
 }

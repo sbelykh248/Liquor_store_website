@@ -11,6 +11,7 @@ import { heroImage } from "@/lib/product-helpers";
 interface DraftVariant {
   label: string;
   price: string;
+  quantity: string;
   isSoldOut: boolean;
 }
 
@@ -31,6 +32,7 @@ export default function ProductEditorPanel({
       return {
         label: v.label,
         price: vo?.price ? String(vo.price) : "",
+        quantity: typeof vo?.quantity === "number" ? String(vo.quantity) : "",
         isSoldOut: Boolean(vo?.soldOut) || Boolean(existing?.soldOut),
       };
     })
@@ -44,8 +46,13 @@ export default function ProductEditorPanel({
     return variants.some((v) => {
       const vo = existing?.variants?.find((o) => o.label === v.label);
       const existingPrice = vo?.price ? String(vo.price) : "";
+      const existingQuantity = typeof vo?.quantity === "number" ? String(vo.quantity) : "";
       const existingSoldOut = Boolean(vo?.soldOut) || Boolean(existing?.soldOut);
-      return v.price !== existingPrice || v.isSoldOut !== existingSoldOut;
+      return (
+        v.price !== existingPrice ||
+        v.quantity !== existingQuantity ||
+        v.isSoldOut !== existingSoldOut
+      );
     });
   }, [wholeSoldOut, variants, existing]);
 
@@ -70,6 +77,11 @@ export default function ProductEditorPanel({
     setVariants((vs) => vs.map((v) => (v.label === label ? { ...v, price: filtered } : v)));
   }
 
+  function setVariantQuantity(label: string, quantity: string) {
+    const filtered = quantity.replace(/[^0-9]/g, "");
+    setVariants((vs) => vs.map((v) => (v.label === label ? { ...v, quantity: filtered } : v)));
+  }
+
   async function handlePublish() {
     setIsPublishing(true);
     setError(null);
@@ -78,6 +90,7 @@ export default function ProductEditorPanel({
       variants: variants.map((v) => ({
         label: v.label,
         price: v.price ? Number(v.price) : undefined,
+        quantity: v.quantity ? Number(v.quantity) : undefined,
         soldOut: v.isSoldOut,
       })),
     };
@@ -174,6 +187,16 @@ export default function ProductEditorPanel({
                         className="w-16 bg-transparent text-right font-mono text-[14.5px] font-semibold text-cream placeholder:text-cream-faint focus:outline-none"
                       />
                     </div>
+                  </div>
+                  <div className="mt-2 flex items-center justify-between gap-3">
+                    <span className="text-[11.5px] text-cream-faint">On-hand quantity</span>
+                    <input
+                      value={variant.quantity}
+                      onChange={(e) => setVariantQuantity(variant.label, e.target.value)}
+                      placeholder="—"
+                      inputMode="numeric"
+                      className="w-16 rounded-lg border border-hairline bg-surface-raised px-2.5 py-1.5 text-right font-mono text-[13px] text-cream placeholder:text-cream-faint focus:border-brass/60 focus:outline-none"
+                    />
                   </div>
                   <label className="mt-2.5 flex cursor-pointer items-center gap-2">
                     <input

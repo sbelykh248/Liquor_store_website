@@ -18,15 +18,15 @@ import { auth, firestore, isFirebaseConfigured } from "@/lib/firebase";
 export type SyncState = "notConnected" | "syncing" | "live" | "stale";
 
 const OVERRIDES_CACHE_KEY = "juniors:overrides-cache:v1";
-const DEMO_SESSION_KEY = "juniors:demo-manager-session:v1";
+const LOCAL_SESSION_KEY = "juniors:manager-session:v1";
 
 /**
  * Passcode used to unlock the Stock Room while no Firebase project is wired
- * up yet. Purely a local, client-side demo gate — it does not protect any
- * real data. Once `NEXT_PUBLIC_FIREBASE_*` env vars are set, real
- * email/password sign-in (Firebase Auth) takes over automatically.
+ * up yet. A local, client-side gate — it does not protect any real data.
+ * Once `NEXT_PUBLIC_FIREBASE_*` env vars are set, real email/password
+ * sign-in (Firebase Auth) takes over automatically instead.
  */
-const DEMO_PASSCODE = process.env.NEXT_PUBLIC_DEMO_STOCK_ROOM_PASSCODE || "juniors2026";
+const STOCK_ROOM_PASSCODE = process.env.NEXT_PUBLIC_STOCK_ROOM_PASSCODE || "juniors2026";
 const MANAGER_EMAIL = "manager@juniorswineliquor.com";
 
 interface ManagerState {
@@ -34,7 +34,7 @@ interface ManagerState {
   email: string | null;
   error: string | null;
   isBusy: boolean;
-  mode: "firebase" | "demo";
+  mode: "firebase" | "local";
 }
 
 interface InventoryContextValue {
@@ -91,7 +91,7 @@ export function InventoryProvider({ children }: { children: ReactNode }) {
     email: null,
     error: null,
     isBusy: false,
-    mode: isFirebaseConfigured ? "firebase" : "demo",
+    mode: isFirebaseConfigured ? "firebase" : "local",
   });
   const unsubscribeRef = useRef<(() => void) | null>(null);
 
@@ -142,7 +142,7 @@ export function InventoryProvider({ children }: { children: ReactNode }) {
     };
   }, [subscribe]);
 
-  // Restore the demo session (local-only mode) or Firebase auth session.
+  // Restore the local passcode session, or the Firebase auth session.
   useEffect(() => {
     if (isFirebaseConfigured && auth) {
       import("firebase/auth").then(({ onAuthStateChanged }) => {
@@ -155,7 +155,7 @@ export function InventoryProvider({ children }: { children: ReactNode }) {
         });
       });
     } else if (typeof window !== "undefined") {
-      const signedIn = window.localStorage.getItem(DEMO_SESSION_KEY) === "true";
+      const signedIn = window.localStorage.getItem(LOCAL_SESSION_KEY) === "true";
       if (signedIn) {
         setManager((m) => ({ ...m, isSignedIn: true, email: MANAGER_EMAIL }));
       }
@@ -195,10 +195,10 @@ export function InventoryProvider({ children }: { children: ReactNode }) {
       }
     }
 
-    // Local demo mode.
+    // Local passcode mode (no Firebase project configured).
     await new Promise((r) => setTimeout(r, 350));
-    if (emailOrPasscode.trim() === DEMO_PASSCODE) {
-      window.localStorage.setItem(DEMO_SESSION_KEY, "true");
+    if (emailOrPasscode.trim() === STOCK_ROOM_PASSCODE) {
+      window.localStorage.setItem(LOCAL_SESSION_KEY, "true");
       setManager((m) => ({
         ...m,
         isSignedIn: true,
@@ -220,7 +220,7 @@ export function InventoryProvider({ children }: { children: ReactNode }) {
     if (isFirebaseConfigured && auth) {
       import("firebase/auth").then(({ signOut: fbSignOut }) => fbSignOut(auth!));
     } else {
-      window.localStorage.removeItem(DEMO_SESSION_KEY);
+      window.localStorage.removeItem(LOCAL_SESSION_KEY);
     }
     setManager((m) => ({ ...m, isSignedIn: false, email: null }));
   }, []);
