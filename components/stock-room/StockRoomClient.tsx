@@ -6,14 +6,14 @@ import { usePersistentState } from "@/lib/use-persistent-state";
 import { cn } from "@/lib/utils";
 import SignInView from "@/components/stock-room/SignInView";
 import StockRoomDashboard from "@/components/stock-room/StockRoomDashboard";
-import CustomerTabs from "@/components/stock-room/CustomerTabs";
+import CustomerLedgerPanel from "@/components/stock-room/customer-ledger/CustomerLedgerPanel";
 import DistributorOrders from "@/components/stock-room/DistributorOrders";
 
-type StockRoomTab = "inventory" | "tabs" | "orders";
+type StockRoomTab = "inventory" | "customers" | "orders";
 
 const TABS: { id: StockRoomTab; label: string }[] = [
   { id: "inventory", label: "Inventory" },
-  { id: "tabs", label: "Customer Tabs" },
+  { id: "customers", label: "Customers" },
   { id: "orders", label: "Distributor Orders" },
 ];
 
@@ -28,7 +28,7 @@ export default function StockRoomClient() {
       <div className="flex items-center justify-between py-5">
         <div>
           <p className="eyebrow text-[9px] text-brass">
-            {isFirebaseConfigured ? "Connected to Firebase" : "Local demo mode"}
+            {isFirebaseConfigured ? "Connected to Firebase" : "Saved on this device"}
           </p>
           <h1 className="mt-1 font-serif text-2xl font-bold text-cream sm:text-3xl">Stock Room</h1>
           {manager.email && <p className="mt-0.5 text-[12px] text-cream-faint">{manager.email}</p>}
@@ -70,7 +70,7 @@ export default function StockRoomClient() {
 
       <div className="mt-5">
         {tab === "inventory" && <StockRoomDashboard />}
-        {tab === "tabs" && <CustomerTabs />}
+        {tab === "customers" && <CustomerLedgerPanel />}
         {tab === "orders" && <DistributorOrders />}
       </div>
     </div>

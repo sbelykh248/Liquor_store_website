@@ -8,6 +8,8 @@ import type { Product, ProductOverride } from "@/lib/types";
  * - Missing override → bundled price, everything in stock.
  * - `soldOut` on the product forces every size sold out.
  * - A variant's `price`, when present and > 0, replaces the bundled price.
+ * - A variant's `quantity`, when present, is passed straight through — an
+ *   on-hand count the Stock Room tracks but the bundled catalog never has.
  * - Sizes not listed in the override keep their bundled price/availability.
  */
 export function mergeOverrides(
@@ -30,6 +32,7 @@ export function mergeOverrides(
             ? variantOverride.price
             : variant.price,
         isSoldOut: Boolean(override.soldOut) || Boolean(variantOverride.soldOut),
+        quantity: variantOverride.quantity,
       };
     });
 
